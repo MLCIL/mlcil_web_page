@@ -53,13 +53,17 @@
   margin-bottom: 0.75rem;
 }
 
+/* Infima gives <code> its own background, border and colour, so reset all three
+   so the project name reads as a heading in both themes. */
 .softwareName {
   padding: 0;
-  font-size: 1.02rem;
-  font-weight: 600;
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 1rem;
+  font-weight: 500;
   color: var(--mlcil-ink);
   background: none;
   border: none;
+  vertical-align: baseline;
 }
 
 .softwareSummary {
@@ -88,14 +92,17 @@
 
 /* ---------------------------------------------------------------- join - */
 
+/* Shares the hero token set, so it flips with the theme too. */
 .joinBanner {
   padding: 3.5rem 0;
-  color: #eef4fa;
+  color: var(--mlcil-hero-ink);
   background: linear-gradient(
     100deg,
     var(--mlcil-hero-from),
     var(--mlcil-hero-to)
   );
+  border-top: 1px solid var(--mlcil-border);
+  border-bottom: 1px solid var(--mlcil-border);
 }
 
 .joinInner {
@@ -109,13 +116,13 @@
 .joinTitle {
   margin: 0 0 0.6rem;
   font-size: 1.8rem;
-  color: #fff;
+  color: var(--mlcil-hero-ink);
 }
 
 .joinText {
   max-width: 62ch;
   margin: 0;
-  color: rgba(232, 241, 249, 0.78);
+  color: var(--mlcil-hero-ink-muted);
 }
 
 .joinActions {
@@ -137,23 +144,24 @@
 }
 
 .joinPrimary {
-  color: #06202f;
-  background: #4ade80;
+  color: var(--mlcil-hero-button-ink);
+  background: var(--mlcil-hero-button-bg);
 }
 
 .joinPrimary:hover {
-  color: #06202f;
-  background: #6ee7a0;
+  color: var(--mlcil-hero-button-ink);
+  background: var(--mlcil-hero-button-bg-hover);
   text-decoration: none;
 }
 
 .joinGhost {
-  color: #e8f1f9;
-  border-color: rgba(232, 241, 249, 0.32);
+  color: var(--mlcil-hero-ghost-ink);
+  border-color: var(--mlcil-hero-ghost-border);
 }
 
 .joinGhost:hover {
-  color: #fff;
-  background: rgba(232, 241, 249, 0.1);
+  color: var(--mlcil-hero-ghost-ink);
+  background: var(--mlcil-hero-ghost-hover-bg);
+  border-color: var(--ifm-color-primary);
   text-decoration: none;
 }

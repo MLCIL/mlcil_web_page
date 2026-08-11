@@ -20,10 +20,10 @@ function ResearchAreas(): ReactNode {
       id="research"
       eyebrow="What we work on"
       title="Research areas"
-      lead="We sit between machine learning and chemistry: building molecular models, checking whether they really work, and shipping the tooling that lets other people check too."
+      lead="Most of what we do is machine learning applied to chemistry: building models, working out whether they actually help, and releasing the tools so that other people can check for themselves. Some of it has nothing to do with chemistry at all."
       action={
         <Link className="mlcil-arrow-link" to="/research">
-          All research areas
+          All {RESEARCH_AREAS.length} research areas
         </Link>
       }>
       <div className={styles.areaGrid}>
@@ -55,7 +55,7 @@ function FeaturedSoftware(): ReactNode {
       sunken
       eyebrow="Open source"
       title="Software & datasets"
-      lead="Research software is a first-class output here. Everything we publish comes with code, and the libraries are maintained for people outside the lab."
+      lead="Every paper we publish comes with the code behind it, and the libraries below are maintained for people outside the lab."
       action={
         <Link className="mlcil-arrow-link" to="/software">
           All projects
@@ -116,9 +116,9 @@ function JoinBanner(): ReactNode {
               Work with us
             </Heading>
             <p className={styles.joinText}>
-              We supervise BSc and MSc theses at {LAB.institution} and are happy
-              to talk to students, researchers and industry groups interested in
-              molecular machine learning. Contributions to our open-source
+              We supervise BSc and MSc theses at {LAB.institution}, and we are
+              glad to hear from students, researchers and companies with a
+              problem worth working on. Contributions to our open source
               projects are welcome from anywhere.
             </p>
           </div>

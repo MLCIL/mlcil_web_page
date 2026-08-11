@@ -7,8 +7,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'Machine Learning and Chemoinformatics Lab',
   tagline:
-    'Molecular machine learning, honest benchmarks and open-source tools for chemoinformatics',
-  favicon: 'img/logo.png',
+    'We build machine learning models for molecules, check whether they really work, and release the code',
+  favicon: 'img/logo.svg',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -47,7 +47,7 @@ const config: Config = {
           showReadingTime: true,
           blogTitle: 'MLCIL blog',
           blogDescription:
-            'Notes, tutorials and write-ups from the Machine Learning and Chemoinformatics Lab',
+            'Notes, write-ups and release announcements from the lab',
           feedOptions: {
             type: ['rss', 'atom'],
             title: 'MLCIL blog',
@@ -67,25 +67,41 @@ const config: Config = {
   ],
 
   themeConfig: {
-    image: 'img/logo.png',
+    // Social preview card (og:image / twitter:image). Must stay a raster
+    // image, because link previews do not render SVG.
+    image: 'img/social-card.png',
     metadata: [
       {
         name: 'keywords',
         content:
-          'chemoinformatics, machine learning, molecular fingerprints, graph neural networks, molecular property prediction, AGH University of Krakow',
+          'machine learning, chemoinformatics, molecular fingerprints, graph neural networks, molecular property prediction, benchmarking, applied machine learning, AGH University of Krakow',
       },
     ],
     colorMode: {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'MLCIL',
+      // No `title`: the logo already carries the MLCIL wordmark, so a text
+      // title next to it would just repeat the name.
       hideOnScroll: false,
       logo: {
-        alt: 'MLCIL logo',
-        src: 'img/logo.png',
+        alt: 'MLCIL, Machine Learning and Chemoinformatics Lab',
+        src: 'img/logo.svg',
+        // Same artwork with a white wordmark, for the dark theme.
+        srcDark: 'img/logo-dark.svg',
+        // The wordmark sits inside the hexagon, so the mark needs most of the
+        // 60px navbar height before it becomes legible.
+        height: 44,
       },
       items: [
+        // activeBaseRegex pins the active state to the homepage itself;
+        // without it react-router treats "/" as a prefix of every route.
+        {
+          to: '/',
+          label: 'Home',
+          position: 'left',
+          activeBaseRegex: '^/$',
+        },
         { to: '/research', label: 'Research', position: 'left' },
         { to: '/publications', label: 'Publications', position: 'left' },
         { to: '/software', label: 'Software', position: 'left' },
@@ -114,7 +130,7 @@ const config: Config = {
         {
           title: 'Open source',
           items: [
-            { label: 'Software & datasets', to: '/software' },
+            { label: 'Software and datasets', to: '/software' },
             {
               label: 'scikit-fingerprints',
               href: 'https://github.com/MLCIL/scikit-fingerprints',

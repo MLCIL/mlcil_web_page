@@ -48,7 +48,7 @@ Add an entry to the relevant group in `src/data/people.ts`:
 }
 ```
 
-Photos go in `static/img/people/` — square, at least 400x400. Without a photo
+Photos go in `static/img/people/`, square and at least 400x400. Without a photo
 the site renders a hexagonal monogram in the lab colours. Groups with no members
 are skipped, so empty sections can stay in place.
 
@@ -61,7 +61,7 @@ link is used as the paper's primary link (the clickable title), so put the DOI
 there once the paper is published.
 
 The counters on the homepage and the publications page are derived from these
-data files, so they stay correct on their own — there is nothing to update by
+data files, so they stay correct on their own. There is nothing to update by
 hand.
 
 ## Deployment

@@ -27,32 +27,69 @@
   --ifm-h1-font-size: 2.5rem;
   --ifm-h2-font-size: 1.9rem;
   --ifm-line-height-base: 1.65;
-  --ifm-navbar-shadow: 0 1px 0 var(--mlcil-border);
   --ifm-navbar-item-padding-horizontal: 0.85rem;
-  --ifm-footer-background-color: var(--mlcil-surface-sunken);
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 
   /* Brand */
-  --mlcil-accent: #1f9d5b;
-  --mlcil-accent-soft: rgba(47, 191, 113, 0.14);
-  --mlcil-ink: #0e1b2a;
+  /* Light-mode green is darkened from the logo colour so that accent *text*
+     clears 4.5:1 on white; the bright logo green is kept for dark surfaces. */
+  --mlcil-accent: #157f47;
+  --mlcil-accent-soft: rgba(21, 127, 71, 0.12);
+  --mlcil-accent-line: rgba(21, 127, 71, 0.35);
+  --mlcil-ink: #16232f;
   --mlcil-ink-muted: #4c5c6d;
   --mlcil-border: #dde5ec;
   --mlcil-border-strong: #c3d1de;
   --mlcil-surface: #ffffff;
   --mlcil-surface-sunken: #f4f7fa;
   --mlcil-surface-raised: #ffffff;
-  --mlcil-hero-from: #0b243a;
-  --mlcil-hero-to: #123c5c;
+  /* The hero and the closing banner are the only full-bleed coloured surfaces,
+     so they get their own token set and flip with the theme like everything
+     else: a pale blue wash in light mode, deep navy in dark mode. */
+  --mlcil-hero-from: #e6eef6;
+  --mlcil-hero-to: #f7fafc;
+  --mlcil-hero-ink: #0e1b2a;
+  --mlcil-hero-ink-muted: #4c5c6d;
+  --mlcil-hero-eyebrow: #157f47;
+  --mlcil-hero-lattice: rgba(26, 110, 168, 0.13);
+  --mlcil-hero-rule: #ccdae7;
+  --mlcil-hero-button-bg: #1a6ea8;
+  --mlcil-hero-button-bg-hover: #175d8e;
+  --mlcil-hero-button-ink: #ffffff;
+  --mlcil-hero-ghost-ink: #16232f;
+  --mlcil-hero-ghost-border: #b7c8d8;
+  --mlcil-hero-ghost-hover-bg: #ffffff;
   --mlcil-shadow: 0 1px 2px rgba(14, 27, 42, 0.06),
     0 8px 24px -12px rgba(14, 27, 42, 0.18);
   --mlcil-shadow-lifted: 0 2px 4px rgba(14, 27, 42, 0.07),
     0 16px 36px -14px rgba(14, 27, 42, 0.28);
   --mlcil-radius: 10px;
   --mlcil-maxw: 1140px;
+
+  /* Infima chrome wired to the brand tokens. NOTE: these are repeated verbatim
+     in the [data-theme='dark'] block below. Infima declares several of them
+     under `html[data-theme='dark']`, which outranks a bare `:root`, so a
+     single declaration here would silently lose in dark mode. */
+  --ifm-font-color-base: var(--mlcil-ink);
+  --ifm-heading-color: var(--mlcil-ink);
+  --ifm-link-hover-color: var(--ifm-color-primary-darker);
+  --ifm-navbar-shadow: 0 1px 0 var(--mlcil-border);
+  --ifm-footer-background-color: var(--mlcil-surface-sunken);
+  --ifm-hr-background-color: var(--mlcil-border);
+  --ifm-toc-border-color: var(--mlcil-border);
+  --ifm-table-border-color: var(--mlcil-border);
+  --ifm-table-stripe-background: var(--mlcil-surface-sunken);
+  --ifm-blockquote-color: var(--mlcil-ink-muted);
+  --ifm-blockquote-border-color: var(--mlcil-border-strong);
+  --ifm-code-background: var(--mlcil-surface-sunken);
+  --ifm-pre-background: var(--mlcil-surface-sunken);
 }
 
-[data-theme='dark'] {
+/* `html[data-theme='dark']`, not `[data-theme='dark']`: Infima declares its own
+   dark values for --ifm-background-color, --ifm-code-background,
+   --ifm-toc-border-color and friends under the html-qualified selector, which
+   outranks a bare attribute selector no matter what order the files load in. */
+html[data-theme='dark'] {
   --ifm-color-primary: #57b6ea;
   --ifm-color-primary-dark: #3ba9e6;
   --ifm-color-primary-darker: #2da2e4;
@@ -67,6 +104,7 @@
 
   --mlcil-accent: #4ade80;
   --mlcil-accent-soft: rgba(74, 222, 128, 0.16);
+  --mlcil-accent-line: rgba(74, 222, 128, 0.35);
   --mlcil-ink: #e8eef4;
   --mlcil-ink-muted: #9aacbd;
   --mlcil-border: #24344a;
@@ -76,9 +114,35 @@
   --mlcil-surface-raised: #182636;
   --mlcil-hero-from: #071726;
   --mlcil-hero-to: #0e3350;
+  --mlcil-hero-ink: #ffffff;
+  --mlcil-hero-ink-muted: rgba(232, 241, 249, 0.78);
+  --mlcil-hero-eyebrow: #7fd4a8;
+  --mlcil-hero-lattice: rgba(126, 217, 255, 0.16);
+  --mlcil-hero-rule: rgba(232, 241, 249, 0.16);
+  --mlcil-hero-button-bg: #4ade80;
+  --mlcil-hero-button-bg-hover: #6ee7a0;
+  --mlcil-hero-button-ink: #06202f;
+  --mlcil-hero-ghost-ink: #e8f1f9;
+  --mlcil-hero-ghost-border: rgba(232, 241, 249, 0.32);
+  --mlcil-hero-ghost-hover-bg: rgba(232, 241, 249, 0.1);
   --mlcil-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px -12px rgba(0, 0, 0, 0.6);
   --mlcil-shadow-lifted: 0 2px 4px rgba(0, 0, 0, 0.45),
     0 16px 36px -14px rgba(0, 0, 0, 0.75);
+
+  /* Repeated from :root; see the note there on Infima's specificity. */
+  --ifm-font-color-base: var(--mlcil-ink);
+  --ifm-heading-color: var(--mlcil-ink);
+  --ifm-link-hover-color: var(--ifm-color-primary-lighter);
+  --ifm-navbar-shadow: 0 1px 0 var(--mlcil-border);
+  --ifm-footer-background-color: var(--mlcil-surface-sunken);
+  --ifm-hr-background-color: var(--mlcil-border);
+  --ifm-toc-border-color: var(--mlcil-border);
+  --ifm-table-border-color: var(--mlcil-border);
+  --ifm-table-stripe-background: rgba(255, 255, 255, 0.04);
+  --ifm-blockquote-color: var(--mlcil-ink-muted);
+  --ifm-blockquote-border-color: var(--mlcil-border-strong);
+  --ifm-code-background: rgba(255, 255, 255, 0.07);
+  --ifm-pre-background: var(--mlcil-surface-sunken);
 }
 
 html {
@@ -257,14 +321,20 @@ a.mlcil-card:hover,
   border-bottom: 1px solid var(--mlcil-border);
 }
 
-.navbar__title {
-  font-family: var(--ifm-heading-font-family);
-  font-weight: 700;
-  letter-spacing: 0.02em;
+/* The logo is a wordmark, so it carries the site identity on its own and needs
+   a little more room than a bare icon would. */
+.navbar__logo {
+  height: 2.75rem;
+  margin-right: 0;
 }
 
 .navbar__logo img {
-  height: 1.9rem;
+  height: 100%;
+  width: auto;
+}
+
+.navbar__brand {
+  margin-right: 1.25rem;
 }
 
 /* Icon-only navbar link to the lab GitHub organisation. */
@@ -292,11 +362,20 @@ a.mlcil-card:hover,
   border-top: 1px solid var(--mlcil-border);
 }
 
+/* The footer is configured as `style: 'light'`, so Infima hardcodes near-black
+   text on it. Remap every footer variable to the brand tokens so the same
+   footer reads correctly in both themes. */
 .footer--light {
   --ifm-footer-background-color: var(--mlcil-surface-sunken);
   --ifm-footer-color: var(--mlcil-ink-muted);
   --ifm-footer-link-color: var(--mlcil-ink-muted);
+  --ifm-footer-link-hover-color: var(--ifm-color-primary);
   --ifm-footer-title-color: var(--mlcil-ink);
+}
+
+.footer__copyright {
+  color: var(--mlcil-ink-muted);
+  font-size: 0.88rem;
 }
 
 /* ------------------------------------------------------------------ misc - */

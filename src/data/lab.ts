@@ -1,0 +1,20 @@
+/**
+ * Lab-wide constants: identity, affiliation and external profiles.
+ * Everything that appears in more than one place on the site lives here.
+ */
+
+export const LAB = {
+  name: 'Machine Learning and Chemoinformatics Lab',
+  shortName: 'MLCIL',
+  institution: 'AGH University of Krakow',
+  faculty: 'Faculty of Computer Science',
+  location: 'Krakow, Poland',
+  tagline:
+    'We build machine learning models for molecules, check whether they really work, and release the code.',
+  description:
+    'MLCIL is a research group at the Faculty of Computer Science, AGH University of Krakow. We work on machine learning for molecules, graph learning, evaluation and benchmarking, applications in other fields, and the open source software behind all of it.',
+  // TODO: fill in the contact address you want public. Left empty on purpose:
+  // the contact section hides the mail link until this is set.
+  email: '',
+  github: 'https://github.com/MLCIL',
+} as const;
