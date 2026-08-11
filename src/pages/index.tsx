@@ -1,115 +1,154 @@
 import type { ReactNode } from 'react';
-import clsx from 'clsx';
 import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
 
+import Hero from '@site/src/components/Hero';
+import Section from '@site/src/components/Section';
+import ResearchIcon from '@site/src/components/ResearchIcon';
+import { PublicationEntry } from '@site/src/components/PublicationList';
+import { LAB } from '@site/src/data/lab';
+import { RESEARCH_AREAS } from '@site/src/data/research';
+import { SELECTED_PUBLICATIONS } from '@site/src/data/publications';
+import { FEATURED_SOFTWARE } from '@site/src/data/software';
+
 import styles from './index.module.css';
 
-function HomepageHeader() {
-  const { siteConfig } = useDocusaurusContext();
+function ResearchAreas(): ReactNode {
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
+    <Section
+      id="research"
+      eyebrow="What we work on"
+      title="Research areas"
+      lead="We sit between machine learning and chemistry: building molecular models, checking whether they really work, and shipping the tooling that lets other people check too."
+      action={
+        <Link className="mlcil-arrow-link" to="/research">
+          All research areas
+        </Link>
+      }>
+      <div className={styles.areaGrid}>
+        {RESEARCH_AREAS.slice(0, 3).map((area) => (
           <Link
-            className="button button--secondary button--lg"
-            to="#research-areas">
-            Explore Research Areas
+            key={area.id}
+            to={`/research#${area.id}`}
+            className="mlcil-card mlcil-card--interactive">
+            <span className={styles.areaIcon}>
+              <ResearchIcon name={area.icon} />
+            </span>
+            <Heading as="h3" className={styles.areaTitle}>
+              {area.title}
+            </Heading>
+            <p className={styles.areaSummary}>{area.summary}</p>
+            <span className={styles.areaKeywords}>
+              {area.keywords.slice(0, 3).join(' · ')}
+            </span>
           </Link>
-        </div>
+        ))}
       </div>
-    </header>
+    </Section>
   );
 }
 
-function LabFeatures() {
+function FeaturedSoftware(): ReactNode {
   return (
-    <section id="research-areas" className="padding-vert--xl features-section" >
-      <div className="container">
-        <div className="row">
-
-          <div className="col col--4 margin-bottom--lg">
-            <div className="card shadow--md h-100 lab-card">
-              <div className="card__header padding-top--lg padding-horiz--lg">
-                <Heading as="h3" style={{ fontSize: '1.25rem', marginBottom: '0' }}>
-                  <span style={{ marginRight: '8px' }}>🧪</span> Chemoinformatics
-                </Heading>
-              </div>
-              <div className="card__body padding--lg text--left">
-                <p className="feature-text">
-                  Advancing computational pharmacology and drug design.
-                  We bridge the gap between chemical expertise and robust software engineering.
-                </p>
-              </div>
+    <Section
+      sunken
+      eyebrow="Open source"
+      title="Software & datasets"
+      lead="Research software is a first-class output here. Everything we publish comes with code, and the libraries are maintained for people outside the lab."
+      action={
+        <Link className="mlcil-arrow-link" to="/software">
+          All projects
+        </Link>
+      }>
+      <div className={styles.softwareGrid}>
+        {FEATURED_SOFTWARE.map((project) => (
+          <div key={project.name} className="mlcil-card">
+            <div className={styles.softwareHead}>
+              <code className={styles.softwareName}>{project.name}</code>
+              <span className="mlcil-tag mlcil-tag--accent">{project.kind}</span>
+            </div>
+            <p className={styles.softwareSummary}>{project.summary}</p>
+            <div className={styles.softwareLinks}>
+              {project.links.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  target="_blank"
+                  rel="noreferrer">
+                  {link.label}
+                </a>
+              ))}
             </div>
           </div>
+        ))}
+      </div>
+    </Section>
+  );
+}
 
-          <div className="col col--4 margin-bottom--lg">
-            <div className="card shadow--md h-100 lab-card">
-              <div className="card__header padding-top--lg padding-horiz--lg">
-                <Heading as="h3" style={{ fontSize: '1.25rem', marginBottom: '0' }}>
-                  <span style={{ marginRight: '8px' }}>🛠️</span> Open Source Tools
-                </Heading>
-              </div>
-              <div className="card__body padding--lg text--left">
-                <p className="feature-text">
-                  Developing robust, open-source software for the scientific community.
-                  We build platforms that enable rigorous benchmarking, data processing, and reproducible research.
-                </p>
-              </div>
-            </div>
+function SelectedPublications(): ReactNode {
+  return (
+    <Section
+      eyebrow="Recent work"
+      title="Selected publications"
+      action={
+        <Link className="mlcil-arrow-link" to="/publications">
+          Full list
+        </Link>
+      }>
+      <div className={styles.publications}>
+        {SELECTED_PUBLICATIONS.slice(0, 5).map((publication) => (
+          <PublicationEntry key={publication.title} publication={publication} />
+        ))}
+      </div>
+    </Section>
+  );
+}
+
+function JoinBanner(): ReactNode {
+  return (
+    <section className={styles.joinBanner}>
+      <div className="mlcil-container">
+        <div className={styles.joinInner}>
+          <div>
+            <Heading as="h2" className={styles.joinTitle}>
+              Work with us
+            </Heading>
+            <p className={styles.joinText}>
+              We supervise BSc and MSc theses at {LAB.institution} and are happy
+              to talk to students, researchers and industry groups interested in
+              molecular machine learning. Contributions to our open-source
+              projects are welcome from anywhere.
+            </p>
           </div>
-
-          <div className="col col--4 margin-bottom--lg">
-            <div className="card shadow--md h-100 lab-card">
-              <div className="card__header padding-top--lg padding-horiz--lg">
-                <Heading as="h3" style={{ fontSize: '1.25rem', marginBottom: '0' }}>
-                  <span style={{ marginRight: '8px' }}>💻</span> Machine Learning
-                </Heading>
-              </div>
-              <div className="card__body padding--lg text--left">
-                <p className="feature-text">
-                  Implementing highly efficient algorithms tailored for massive chemical datasets.
-                  We focus on the optimization and strict validation of novel neural architectures.
-                </p>
-              </div>
-            </div>
+          <div className={styles.joinActions}>
+            <Link className={styles.joinPrimary} to="/people">
+              Meet the lab
+            </Link>
+            <a
+              className={styles.joinGhost}
+              href={LAB.github}
+              target="_blank"
+              rel="noreferrer">
+              GitHub organisation
+            </a>
           </div>
-
         </div>
       </div>
-    </section >
+    </section>
   );
 }
 
 export default function Home(): ReactNode {
-  const { siteConfig } = useDocusaurusContext();
   return (
-    <Layout
-      title="Home"
-      description="ML & Chemoinformatics Lab (MLCIL), AGH University of Krakow">
-      <HomepageHeader />
+    <Layout title="Home" description={LAB.description}>
+      <Hero />
       <main>
-        <LabFeatures />
-        <section className="padding-vert--xl text--center">
-          <div className="container">
-            <Heading as="h2">Publications</Heading>
-            <p className="margin-top--md coming-soon-text">
-              Check back soon for our first technical writeups and analyses.
-            </p>
-            <div className="margin-top--lg">
-              <Link className="button button--outline button--primary button--lg" to="/blog">
-                Check out the Blog
-              </Link>
-            </div>
-          </div>
-        </section>
+        <ResearchAreas />
+        <FeaturedSoftware />
+        <SelectedPublications />
+        <JoinBanner />
       </main>
     </Layout>
   );

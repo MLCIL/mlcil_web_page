@@ -1,23 +1,159 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
+/* Homepage-only styles. Shared primitives live in src/css/custom.css. */
 
-.heroBanner {
-  padding: 4rem 0;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
+.areaGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
-  }
+.areaIcon {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  margin-bottom: 1rem;
+  color: var(--ifm-color-primary);
+  background: var(--mlcil-surface-sunken);
+  border: 1px solid var(--mlcil-border);
+  border-radius: 8px;
 }
 
-.buttons {
+.areaTitle {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+}
+
+.areaSummary {
+  margin: 0 0 1.1rem;
+  font-size: 0.96rem;
+  color: var(--mlcil-ink-muted);
+}
+
+.areaKeywords {
+  margin-top: auto;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--mlcil-border);
+  font-size: 0.8rem;
+  color: var(--mlcil-ink-muted);
+}
+
+/* ------------------------------------------------------------- software - */
+
+.softwareGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.softwareHead {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.softwareName {
+  padding: 0;
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: var(--mlcil-ink);
+  background: none;
+  border: none;
+}
+
+.softwareSummary {
+  margin: 0 0 1rem;
+  font-size: 0.96rem;
+  color: var(--mlcil-ink-muted);
+}
+
+.softwareLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: auto;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--mlcil-border);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* --------------------------------------------------------- publications - */
+
+.publications {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------------------------------------------------------------- join - */
+
+.joinBanner {
+  padding: 3.5rem 0;
+  color: #eef4fa;
+  background: linear-gradient(
+    100deg,
+    var(--mlcil-hero-from),
+    var(--mlcil-hero-to)
+  );
+}
+
+.joinInner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.joinTitle {
+  margin: 0 0 0.6rem;
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+.joinText {
+  max-width: 62ch;
+  margin: 0;
+  color: rgba(232, 241, 249, 0.78);
+}
+
+.joinActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.joinPrimary,
+.joinGhost {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.6rem 1.3rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  transition: background-color 150ms ease, border-color 150ms ease;
+}
+
+.joinPrimary {
+  color: #06202f;
+  background: #4ade80;
+}
+
+.joinPrimary:hover {
+  color: #06202f;
+  background: #6ee7a0;
+  text-decoration: none;
+}
+
+.joinGhost {
+  color: #e8f1f9;
+  border-color: rgba(232, 241, 249, 0.32);
+}
+
+.joinGhost:hover {
+  color: #fff;
+  background: rgba(232, 241, 249, 0.1);
+  text-decoration: none;
 }

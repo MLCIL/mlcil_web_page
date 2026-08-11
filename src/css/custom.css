@@ -1,30 +1,312 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * MLCIL design system.
+ *
+ * Global styles built on top of Infima (bundled with the Docusaurus classic
+ * theme). Palette is derived from the lab logo: a deep instrument blue paired
+ * with the benzene-ring green as an accent.
  */
 
-/* You can override the default Infima variables here. */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=JetBrains+Mono:wght@400;500&display=swap');
+
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
+  --ifm-color-primary: #1a6ea8;
+  --ifm-color-primary-dark: #186397;
+  --ifm-color-primary-darker: #175d8e;
+  --ifm-color-primary-darkest: #134d75;
+  --ifm-color-primary-light: #1c79b9;
+  --ifm-color-primary-lighter: #1d7fc2;
+  --ifm-color-primary-lightest: #268fd6;
+
+  --ifm-font-family-base: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto,
+    Helvetica, Arial, sans-serif;
+  --ifm-heading-font-family: 'Source Serif 4', Charter, Cambria, Georgia, serif;
+  --ifm-font-family-monospace: 'JetBrains Mono', ui-monospace, SFMono-Regular,
+    Menlo, Consolas, monospace;
+  --ifm-code-font-size: 92%;
+  --ifm-heading-font-weight: 600;
+  --ifm-h1-font-size: 2.5rem;
+  --ifm-h2-font-size: 1.9rem;
+  --ifm-line-height-base: 1.65;
+  --ifm-navbar-shadow: 0 1px 0 var(--mlcil-border);
+  --ifm-navbar-item-padding-horizontal: 0.85rem;
+  --ifm-footer-background-color: var(--mlcil-surface-sunken);
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  /* Brand */
+  --mlcil-accent: #1f9d5b;
+  --mlcil-accent-soft: rgba(47, 191, 113, 0.14);
+  --mlcil-ink: #0e1b2a;
+  --mlcil-ink-muted: #4c5c6d;
+  --mlcil-border: #dde5ec;
+  --mlcil-border-strong: #c3d1de;
+  --mlcil-surface: #ffffff;
+  --mlcil-surface-sunken: #f4f7fa;
+  --mlcil-surface-raised: #ffffff;
+  --mlcil-hero-from: #0b243a;
+  --mlcil-hero-to: #123c5c;
+  --mlcil-shadow: 0 1px 2px rgba(14, 27, 42, 0.06),
+    0 8px 24px -12px rgba(14, 27, 42, 0.18);
+  --mlcil-shadow-lifted: 0 2px 4px rgba(14, 27, 42, 0.07),
+    0 16px 36px -14px rgba(14, 27, 42, 0.28);
+  --mlcil-radius: 10px;
+  --mlcil-maxw: 1140px;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary: #57b6ea;
+  --ifm-color-primary-dark: #3ba9e6;
+  --ifm-color-primary-darker: #2da2e4;
+  --ifm-color-primary-darkest: #1889cd;
+  --ifm-color-primary-light: #73c3ee;
+  --ifm-color-primary-lighter: #82c9f0;
+  --ifm-color-primary-lightest: #aedcf6;
+
+  --ifm-background-color: #0d1620;
+  --ifm-background-surface-color: #131f2c;
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
+
+  --mlcil-accent: #4ade80;
+  --mlcil-accent-soft: rgba(74, 222, 128, 0.16);
+  --mlcil-ink: #e8eef4;
+  --mlcil-ink-muted: #9aacbd;
+  --mlcil-border: #24344a;
+  --mlcil-border-strong: #33475f;
+  --mlcil-surface: #131f2c;
+  --mlcil-surface-sunken: #0f1a26;
+  --mlcil-surface-raised: #182636;
+  --mlcil-hero-from: #071726;
+  --mlcil-hero-to: #0e3350;
+  --mlcil-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px -12px rgba(0, 0, 0, 0.6);
+  --mlcil-shadow-lifted: 0 2px 4px rgba(0, 0, 0, 0.45),
+    0 16px 36px -14px rgba(0, 0, 0, 0.75);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: -0.012em;
+}
+
+/* ---------------------------------------------------------------- layout - */
+
+.mlcil-container {
+  max-width: var(--mlcil-maxw);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.mlcil-section {
+  padding: 4.5rem 0;
+}
+
+.mlcil-section--sunken {
+  background: var(--mlcil-surface-sunken);
+  border-top: 1px solid var(--mlcil-border);
+  border-bottom: 1px solid var(--mlcil-border);
+}
+
+/* Small-caps label that sits above a section heading. */
+.mlcil-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.6rem;
+  font-family: var(--ifm-font-family-base);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ifm-color-primary);
+}
+
+.mlcil-eyebrow::before {
+  content: '';
+  width: 1.6rem;
+  height: 2px;
+  background: var(--mlcil-accent);
+}
+
+.mlcil-section-title {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.7rem, 1.2rem + 1.6vw, 2.25rem);
+}
+
+.mlcil-section-lead {
+  max-width: 62ch;
+  margin: 0;
+  color: var(--mlcil-ink-muted);
+  font-size: 1.05rem;
+}
+
+.mlcil-section-head {
+  margin-bottom: 2.5rem;
+}
+
+.mlcil-section-head-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem 2rem;
+}
+
+.mlcil-section-action {
+  flex: none;
+  padding-bottom: 0.35rem;
+}
+
+/* ----------------------------------------------------------------- cards - */
+
+.mlcil-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1.5rem;
+  background: var(--mlcil-surface-raised);
+  border: 1px solid var(--mlcil-border);
+  border-radius: var(--mlcil-radius);
+  box-shadow: var(--mlcil-shadow);
+  transition: transform 160ms ease, box-shadow 160ms ease,
+    border-color 160ms ease;
+}
+
+a.mlcil-card,
+a.mlcil-card:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+a.mlcil-card:hover,
+.mlcil-card--interactive:hover {
+  transform: translateY(-3px);
+  border-color: var(--mlcil-border-strong);
+  box-shadow: var(--mlcil-shadow-lifted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  a.mlcil-card:hover,
+  .mlcil-card--interactive:hover {
+    transform: none;
+  }
+}
+
+/* ------------------------------------------------------------------ tags - */
+
+.mlcil-tag {
+  display: inline-block;
+  padding: 0.15rem 0.55rem;
+  font-size: 0.74rem;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--mlcil-ink-muted);
+  background: var(--mlcil-surface-sunken);
+  border: 1px solid var(--mlcil-border);
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.mlcil-tag--accent {
+  color: var(--mlcil-accent);
+  background: var(--mlcil-accent-soft);
+  border-color: transparent;
+}
+
+.mlcil-tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+/* ----------------------------------------------------------------- links - */
+
+.mlcil-arrow-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.mlcil-arrow-link::after {
+  content: '→';
+  transition: transform 160ms ease;
+}
+
+.mlcil-arrow-link:hover {
+  text-decoration: none;
+}
+
+.mlcil-arrow-link:hover::after {
+  transform: translateX(3px);
+}
+
+/* ---------------------------------------------------------------- navbar - */
+
+.navbar {
+  border-bottom: 1px solid var(--mlcil-border);
+}
+
+.navbar__title {
+  font-family: var(--ifm-heading-font-family);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.navbar__logo img {
+  height: 1.9rem;
+}
+
+/* Icon-only navbar link to the lab GitHub organisation. */
+.navbar-github-link {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-github-link::before {
+  content: '';
+  width: 22px;
+  height: 22px;
+  background: currentColor;
+  -webkit-mask: var(--mlcil-github-mask) center / contain no-repeat;
+  mask: var(--mlcil-github-mask) center / contain no-repeat;
+}
+
+:root {
+  --mlcil-github-mask: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.9 1.2 1.9 1.2 1.1 1.9 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2 0-.4-.5-1.6.2-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.6.2 2.8.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3'/%3E%3C/svg%3E");
+}
+
+/* ---------------------------------------------------------------- footer - */
+
+.footer {
+  border-top: 1px solid var(--mlcil-border);
+}
+
+.footer--light {
+  --ifm-footer-background-color: var(--mlcil-surface-sunken);
+  --ifm-footer-color: var(--mlcil-ink-muted);
+  --ifm-footer-link-color: var(--mlcil-ink-muted);
+  --ifm-footer-title-color: var(--mlcil-ink);
+}
+
+/* ------------------------------------------------------------------ misc - */
+
+.mlcil-prose a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Docusaurus renders blog/doc content inside .markdown */
+.markdown h1:first-child {
+  --ifm-h1-font-size: 2.4rem;
 }
