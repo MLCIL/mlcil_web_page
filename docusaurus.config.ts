@@ -53,7 +53,7 @@ const config: Config = {
             title: 'MLCIL blog',
             xslt: true,
           },
-          editUrl: 'https://github.com/MLCIL/mlcil.org/tree/main/',
+          editUrl: 'https://github.com/MLCIL/mlcil.org/tree/master/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',

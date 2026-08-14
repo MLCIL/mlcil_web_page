@@ -3,7 +3,7 @@
 Website of the **Machine Learning and Chemoinformatics Lab (MLCIL)**, Faculty of
 Computer Science, AGH University of Krakow. Built with
 [Docusaurus](https://docusaurus.io/) and deployed to GitHub Pages on every push
-to `main`.
+to `master`.
 
 ## Development
 
