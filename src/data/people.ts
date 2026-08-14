@@ -2,7 +2,7 @@
  * Lab members.
  *
  * Add a person by dropping an entry into the right array. `photo` is optional:
- * without it the site renders a hexagonal monogram in the lab colors. Photos
+ * without it the site renders a monogram in the lab colors. Photos
  * go in `static/img/people/` and are referenced as `img/people/<file>` (square
  * images, at least 400x400, look best).
  */
@@ -17,7 +17,6 @@ export type Person = {
   role: string;
   /** Short bio, 1-3 sentences. */
   bio?: string;
-  interests?: string[];
   photo?: string;
   links?: PersonLink[];
 };
@@ -31,16 +30,9 @@ export type PeopleGroup = {
 
 export const LAB_LEAD: Person = {
   name: 'Jakub Adamczyk',
-  role: 'Lab lead · PhD candidate, AGH University of Krakow',
-  bio: 'Jakub runs MLCIL and is a PhD candidate at the Faculty of Computer Science, AGH University of Krakow. His research covers molecular representation learning, graph machine learning and how chemoinformatics models are evaluated. He wrote scikit-fingerprints and still maintains it. Outside the university he works as a data science engineer.',
-  interests: [
-    'Chemoinformatics',
-    'Graph machine learning',
-    'Molecular property prediction',
-    'Datasets & benchmarks',
-    'Fair evaluation',
-    'Open-source software',
-  ],
+  role: 'Lab lead · Researcher, Faculty of Computer Science, AGH',
+  photo: 'img/people/Jakub_Adamczyk.jpg',
+  bio: 'Leader and founder of MLCIL. His scientific interests include chemoinformatics, QSAR/QSPR, graph machine learning, and applications of ML in chemoinformatics and other fields.',
   links: [
     {
       label: 'Scholar',

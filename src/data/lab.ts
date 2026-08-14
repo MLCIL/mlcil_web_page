@@ -13,8 +13,7 @@ export const LAB = {
     'Research group focused on chemoinformatics, applied artificial intelligence, and open science',
   description:
     'MLCIL is a research group at the Faculty of Computer Science, AGH University of Krakow. We work on machine learning for molecules, graph learning, evaluation and benchmarking, applications in other fields, and the open source software behind all of it.',
-  // TODO: fill in the contact address you want public. Left empty on purpose:
-  // the contact section hides the mail link until this is set.
-  email: '',
+  email: 'jadamczy@agh.edu.pl',
   github: 'https://github.com/MLCIL',
+  linkedin: 'https://www.linkedin.com/company/141523919',
 } as const;

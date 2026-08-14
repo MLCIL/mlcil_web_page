@@ -16,8 +16,8 @@ function initials(name: string): string {
 }
 
 /**
- * Hexagonal portrait frame: shows the photo when there is one, and a monogram
- * in the lab gradient when there is not.
+ * Square portrait frame: shows the photo when there is one, and a monogram in
+ * the lab gradient when there is not.
  */
 function Portrait({
   person,
@@ -73,15 +73,6 @@ export function PersonFeature({ person }: { person: Person }): ReactNode {
         </Heading>
         <p className={styles.role}>{person.role}</p>
         {person.bio && <p className={styles.bio}>{person.bio}</p>}
-        {person.interests && person.interests.length > 0 && (
-          <div className="mlcil-tag-row">
-            {person.interests.map((interest) => (
-              <span key={interest} className="mlcil-tag">
-                {interest}
-              </span>
-            ))}
-          </div>
-        )}
         <PersonLinks person={person} />
       </div>
     </div>
@@ -97,15 +88,6 @@ export default function PersonCard({ person }: { person: Person }): ReactNode {
       </Heading>
       <p className={styles.role}>{person.role}</p>
       {person.bio && <p className={styles.bio}>{person.bio}</p>}
-      {person.interests && person.interests.length > 0 && (
-        <div className={clsx('mlcil-tag-row', styles.cardTags)}>
-          {person.interests.slice(0, 4).map((interest) => (
-            <span key={interest} className="mlcil-tag">
-              {interest}
-            </span>
-          ))}
-        </div>
-      )}
       <PersonLinks person={person} />
     </div>
   );

@@ -49,7 +49,7 @@ Add an entry to the relevant group in `src/data/people.ts`:
 ```
 
 Photos go in `static/img/people/`, square and at least 400x400. Without a photo
-the site renders a hexagonal monogram in the lab colors. Groups with no members
+the site renders a monogram in the lab colors. Groups with no members
 are skipped, so empty sections can stay in place.
 
 ### Adding a publication

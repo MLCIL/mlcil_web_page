@@ -111,6 +111,7 @@ const config: Config = {
         { to: '/people', label: 'People', position: 'left' },
         { to: '/grants', label: 'Grants', position: 'left' },
         { to: '/blog', label: 'Blog', position: 'left' },
+        { to: '/contact', label: 'Contact', position: 'left' },
         {
           href: 'https://github.com/MLCIL',
           position: 'right',
@@ -130,6 +131,7 @@ const config: Config = {
             { label: 'People', to: '/people' },
             { label: 'Grants', to: '/grants' },
             { label: 'Blog', to: '/blog' },
+            { label: 'Contact', to: '/contact' },
           ],
         },
         {

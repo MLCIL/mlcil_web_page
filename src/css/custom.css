@@ -51,6 +51,9 @@
   --mlcil-surface: #ffffff;
   --mlcil-surface-sunken: #f4f7fa;
   --mlcil-surface-raised: #ffffff;
+  /* Tint for the lab lead's card, so it reads as the head of the page. */
+  --mlcil-surface-accented: #eff6fb;
+  --mlcil-border-accented: #cadeee;
   /* The hero and the closing banner are the only full-bleed colored surfaces,
      so they get their own token set and flip with the theme like everything
      else: a pale blue wash in light mode, deep navy in dark mode. */
@@ -124,6 +127,8 @@ html[data-theme='dark'] {
   --mlcil-surface: #131f2c;
   --mlcil-surface-sunken: #0f1a26;
   --mlcil-surface-raised: #182636;
+  --mlcil-surface-accented: #16293a;
+  --mlcil-border-accented: #2c4a66;
   --mlcil-hero-from: #071726;
   --mlcil-hero-to: #0e3350;
   --mlcil-hero-ink: #ffffff;

@@ -36,15 +36,6 @@
 }
 
 .join p {
-  max-width: 72ch;
   margin: 0;
   color: var(--mlcil-ink-muted);
-}
-
-.joinLinks {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  margin-top: 1.25rem;
-  font-weight: 600;
 }
