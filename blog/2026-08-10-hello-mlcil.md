@@ -7,6 +7,6 @@ tags: [ lab ]
 
 MLCIL web page is now live! Stay tuned for research updates, blog posts, and more.
 
-<!-- truncate -->
+{/* truncate */}
 
 
