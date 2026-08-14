@@ -90,23 +90,6 @@
   color: var(--mlcil-ink-muted);
 }
 
-.dot {
-  opacity: 0.5;
-}
-
-.typeTag {
-  padding: 0.05rem 0.5rem;
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--ifm-color-primary);
-  background: var(--mlcil-surface-sunken);
-  border: 1px solid var(--mlcil-border);
-  border-radius: 4px;
-}
-
-/* The year lives in the gutter on wide screens, inline on narrow ones. */
 .yearInline {
   display: none;
   font-variant-numeric: tabular-nums;

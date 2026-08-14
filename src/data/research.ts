@@ -24,7 +24,7 @@ export const RESEARCH_AREAS: ResearchArea[] = [
     icon: 'molecule',
     title: 'Chemoinformatics',
     summary:
-      'Molecular property prediction and applications: molecular fingerprints, physicochemical descriptors, and pretrained molecular foundation models. We apply them to concrete problems and domains like ecotoxicology and peptide function prediction.',
+      'Molecular property prediction, QSAR/QSPR, and applications: molecular fingerprints, physicochemical descriptors, and pretrained molecular foundation models. We apply them to concrete problems and domains like ecotoxicology and peptide function prediction.',
   },
   {
     id: 'graph-ml',

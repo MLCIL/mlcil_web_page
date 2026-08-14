@@ -1,16 +1,7 @@
 import type { ReactNode } from 'react';
-import {
-  type Publication,
-  type PublicationType,
-} from '@site/src/data/publications';
+import { type Publication } from '@site/src/data/publications';
 
 import styles from './styles.module.css';
-
-const TYPE_LABEL: Record<PublicationType, string> = {
-  journal: 'Journal',
-  conference: 'Conference',
-  preprint: 'Preprint',
-};
 
 function AuthorLine({ authors }: { authors: string[] }): ReactNode {
   return <p className={styles.authors}>{authors.join(', ')}</p>;
@@ -18,11 +9,8 @@ function AuthorLine({ authors }: { authors: string[] }): ReactNode {
 
 export function PublicationEntry({
   publication,
-  showType = true,
 }: {
   publication: Publication;
-  /** The homepage drops the journal/conference/preprint tag. */
-  showType?: boolean;
 }): ReactNode {
   const primaryLink = publication.links[0]?.href;
   return (
@@ -43,14 +31,6 @@ export function PublicationEntry({
         <AuthorLine authors={publication.authors} />
         <p className={styles.venue}>
           <em>{publication.venue}</em>
-          {showType && (
-            <>
-              <span className={styles.dot}>·</span>
-              <span className={styles.typeTag}>
-                {TYPE_LABEL[publication.type]}
-              </span>
-            </>
-          )}
           <span className={styles.yearInline}>{publication.year}</span>
         </p>
         <div className={styles.links}>

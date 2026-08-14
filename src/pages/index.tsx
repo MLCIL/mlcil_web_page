@@ -62,11 +62,7 @@ function LatestPublications(): ReactNode {
       }>
       <div className={styles.publications}>
         {PUBLICATIONS.slice(0, 5).map((publication) => (
-          <PublicationEntry
-            key={publication.title}
-            publication={publication}
-            showType={false}
-          />
+          <PublicationEntry key={publication.title} publication={publication} />
         ))}
       </div>
     </Section>
