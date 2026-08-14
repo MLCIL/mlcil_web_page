@@ -1,0 +1,134 @@
+/* Hexagon frame, echoing the hexagon in the lab logo. */
+.portrait {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 96px;
+  height: 96px;
+  flex: none;
+  overflow: hidden;
+  background: linear-gradient(150deg, var(--mlcil-hero-to), var(--ifm-color-primary) 55%, var(--mlcil-accent));
+  border-radius: 8px;
+}
+
+.portraitLg {
+  width: 160px;
+  height: 160px;
+}
+
+.portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.monogram {
+  font-family: var(--ifm-heading-font-family);
+  font-size: 1.9rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #fff;
+}
+
+.portraitLg .monogram {
+  font-size: 3rem;
+}
+
+/* ------------------------------------------------------------- grid card - */
+
+.card {
+  align-items: flex-start;
+  gap: 0.15rem;
+}
+
+.card .portrait {
+  margin-bottom: 1rem;
+}
+
+.name {
+  margin: 0 0 0.2rem;
+  font-size: 1.15rem;
+}
+
+.role {
+  margin: 0 0 0.7rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--ifm-color-primary);
+}
+
+.bio {
+  margin: 0 0 0.9rem;
+  font-size: 0.94rem;
+  color: var(--mlcil-ink-muted);
+}
+
+/* ------------------------------------------------------------ lead card - */
+
+.feature {
+  flex-direction: row;
+  gap: 2rem;
+  padding: 2rem;
+  /* Tinted, since this is the lab lead rather than one card among many. */
+  background: var(--mlcil-surface-accented);
+  border-color: var(--mlcil-border-accented);
+}
+
+.featureAside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.featureBody {
+  min-width: 0;
+}
+
+.featureName {
+  margin: 0 0 0.25rem;
+  font-size: 1.6rem;
+}
+
+.feature .bio {
+  font-size: 1rem;
+  margin-bottom: 1.1rem;
+}
+
+.feature .role {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+/* ----------------------------------------------------------------- links - */
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+.linkChip {
+  padding: 0.2rem 0.7rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+  border: 1px solid var(--mlcil-border-strong);
+  border-radius: 999px;
+  transition: background-color 140ms ease, border-color 140ms ease;
+}
+
+.linkChip:hover {
+  background: var(--mlcil-surface-sunken);
+  border-color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .feature {
+    flex-direction: column;
+    gap: 1.25rem;
+    padding: 1.5rem;
+  }
+}

@@ -1,30 +1,396 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * MLCIL design system.
+ *
+ * Global styles built on top of Infima (bundled with the Docusaurus classic
+ * theme). Palette is derived from the lab logo: a deep instrument blue paired
+ * with the logo orange as an accent, on white. Headings and body text share one
+ * sans-serif family, Inter.
  */
 
-/* You can override the default Infima variables here. */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
+  --ifm-color-primary: #1a6ea8;
+  --ifm-color-primary-dark: #186397;
+  --ifm-color-primary-darker: #175d8e;
+  --ifm-color-primary-darkest: #134d75;
+  --ifm-color-primary-light: #1c79b9;
+  --ifm-color-primary-lighter: #1d7fc2;
+  --ifm-color-primary-lightest: #268fd6;
+
+  --ifm-font-family-base: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto,
+    Helvetica, Arial, sans-serif;
+  --ifm-heading-font-family: var(--ifm-font-family-base);
+  --ifm-font-family-monospace: 'JetBrains Mono', ui-monospace, SFMono-Regular,
+    Menlo, Consolas, monospace;
+  --ifm-code-font-size: 92%;
+  --ifm-heading-font-weight: 600;
+  --ifm-h1-font-size: 2.5rem;
+  --ifm-h2-font-size: 1.9rem;
+  --ifm-line-height-base: 1.65;
+  --ifm-navbar-item-padding-horizontal: 0.85rem;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  /* Brand */
+  /* The logo orange (#f6a200) is only 2.1:1 on white, so light mode splits it in
+     two rather than darkening one value until it goes muddy:
+       --mlcil-accent      fills and rules — stays vivid, clears 3:1 on white
+       --mlcil-accent-text accent *text* — darker, clears 4.5:1 on white, on the
+                           sunken surface and on the pale hero wash
+     The text value is nudged toward red rather than down in lightness, which
+     keeps it reading as orange instead of olive-gold. Dark mode needs no split
+     and points both at the same bright orange. */
+  --mlcil-accent: #d97706;
+  --mlcil-accent-text: #ad4e07;
+  --mlcil-accent-soft: rgba(217, 119, 6, 0.12);
+  --mlcil-accent-line: rgba(217, 119, 6, 0.45);
+  --mlcil-ink: #16232f;
+  --mlcil-ink-muted: #4c5c6d;
+  --mlcil-border: #dde5ec;
+  --mlcil-border-strong: #c3d1de;
+  --mlcil-surface: #ffffff;
+  --mlcil-surface-sunken: #f4f7fa;
+  --mlcil-surface-raised: #ffffff;
+  /* Tint for the lab lead's card, so it reads as the head of the page. */
+  --mlcil-surface-accented: #eff6fb;
+  --mlcil-border-accented: #cadeee;
+  /* The hero and the closing banner are the only full-bleed colored surfaces,
+     so they get their own token set and flip with the theme like everything
+     else: a pale blue wash in light mode, deep navy in dark mode. */
+  --mlcil-hero-from: #e6eef6;
+  --mlcil-hero-to: #f7fafc;
+  --mlcil-hero-ink: #0e1b2a;
+  --mlcil-hero-ink-muted: #4c5c6d;
+  --mlcil-hero-eyebrow: #ad4e07;
+  --mlcil-hero-lattice: rgba(26, 110, 168, 0.13);
+  --mlcil-hero-button-bg: #1a6ea8;
+  --mlcil-hero-button-bg-hover: #175d8e;
+  --mlcil-hero-button-ink: #ffffff;
+  --mlcil-hero-soft-bg: rgba(26, 110, 168, 0.13);
+  --mlcil-hero-soft-bg-hover: rgba(26, 110, 168, 0.22);
+  --mlcil-hero-soft-ink: #134d75;
+  --mlcil-hero-soft-border: rgba(26, 110, 168, 0.38);
+  --mlcil-shadow: 0 1px 2px rgba(14, 27, 42, 0.06),
+    0 8px 24px -12px rgba(14, 27, 42, 0.18);
+  --mlcil-shadow-lifted: 0 2px 4px rgba(14, 27, 42, 0.07),
+    0 16px 36px -14px rgba(14, 27, 42, 0.28);
+  --mlcil-radius: 10px;
+  --mlcil-maxw: 1140px;
+
+  /* Infima chrome wired to the brand tokens. NOTE: these are repeated verbatim
+     in the [data-theme='dark'] block below. Infima declares several of them
+     under `html[data-theme='dark']`, which outranks a bare `:root`, so a
+     single declaration here would silently lose in dark mode. */
+  --ifm-font-color-base: var(--mlcil-ink);
+  --ifm-heading-color: var(--mlcil-ink);
+  --ifm-link-hover-color: var(--ifm-color-primary-darker);
+  --ifm-navbar-shadow: 0 1px 0 var(--mlcil-border);
+  --ifm-footer-background-color: var(--mlcil-surface-sunken);
+  --ifm-hr-background-color: var(--mlcil-border);
+  --ifm-toc-border-color: var(--mlcil-border);
+  --ifm-table-border-color: var(--mlcil-border);
+  --ifm-table-stripe-background: var(--mlcil-surface-sunken);
+  --ifm-blockquote-color: var(--mlcil-ink-muted);
+  --ifm-blockquote-border-color: var(--mlcil-border-strong);
+  --ifm-code-background: var(--mlcil-surface-sunken);
+  --ifm-pre-background: var(--mlcil-surface-sunken);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+/* `html[data-theme='dark']`, not `[data-theme='dark']`: Infima declares its own
+   dark values for --ifm-background-color, --ifm-code-background,
+   --ifm-toc-border-color and friends under the html-qualified selector, which
+   outranks a bare attribute selector no matter what order the files load in. */
+html[data-theme='dark'] {
+  --ifm-color-primary: #57b6ea;
+  --ifm-color-primary-dark: #3ba9e6;
+  --ifm-color-primary-darker: #2da2e4;
+  --ifm-color-primary-darkest: #1889cd;
+  --ifm-color-primary-light: #73c3ee;
+  --ifm-color-primary-lighter: #82c9f0;
+  --ifm-color-primary-lightest: #aedcf6;
+
+  --ifm-background-color: #0d1620;
+  --ifm-background-surface-color: #131f2c;
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
+
+  /* Dark surfaces take the logo orange lifted to the same hue but brighter, so
+     the accent reads as the light-mode orange rather than a second color. It
+     clears 4.5:1 on every dark surface, so fills and text share one value. */
+  --mlcil-accent: #ffb833;
+  --mlcil-accent-text: #ffb833;
+  --mlcil-accent-soft: rgba(255, 184, 51, 0.16);
+  --mlcil-accent-line: rgba(255, 184, 51, 0.35);
+  --mlcil-ink: #e8eef4;
+  --mlcil-ink-muted: #9aacbd;
+  --mlcil-border: #24344a;
+  --mlcil-border-strong: #33475f;
+  --mlcil-surface: #131f2c;
+  --mlcil-surface-sunken: #0f1a26;
+  --mlcil-surface-raised: #182636;
+  --mlcil-surface-accented: #16293a;
+  --mlcil-border-accented: #2c4a66;
+  --mlcil-hero-from: #071726;
+  --mlcil-hero-to: #0e3350;
+  --mlcil-hero-ink: #ffffff;
+  --mlcil-hero-ink-muted: rgba(232, 241, 249, 0.78);
+  --mlcil-hero-eyebrow: #ffc061;
+  --mlcil-hero-lattice: rgba(126, 217, 255, 0.16);
+  --mlcil-hero-button-bg: #ffb833;
+  --mlcil-hero-button-bg-hover: #ffc861;
+  --mlcil-hero-button-ink: #06202f;
+  --mlcil-hero-soft-bg: rgba(87, 182, 234, 0.18);
+  --mlcil-hero-soft-bg-hover: rgba(87, 182, 234, 0.3);
+  --mlcil-hero-soft-ink: #aedcf6;
+  --mlcil-hero-soft-border: rgba(87, 182, 234, 0.45);
+  --mlcil-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px -12px rgba(0, 0, 0, 0.6);
+  --mlcil-shadow-lifted: 0 2px 4px rgba(0, 0, 0, 0.45),
+    0 16px 36px -14px rgba(0, 0, 0, 0.75);
+
+  /* Repeated from :root; see the note there on Infima's specificity. */
+  --ifm-font-color-base: var(--mlcil-ink);
+  --ifm-heading-color: var(--mlcil-ink);
+  --ifm-link-hover-color: var(--ifm-color-primary-lighter);
+  --ifm-navbar-shadow: 0 1px 0 var(--mlcil-border);
+  --ifm-footer-background-color: var(--mlcil-surface-sunken);
+  --ifm-hr-background-color: var(--mlcil-border);
+  --ifm-toc-border-color: var(--mlcil-border);
+  --ifm-table-border-color: var(--mlcil-border);
+  --ifm-table-stripe-background: rgba(255, 255, 255, 0.04);
+  --ifm-blockquote-color: var(--mlcil-ink-muted);
+  --ifm-blockquote-border-color: var(--mlcil-border-strong);
+  --ifm-code-background: rgba(255, 255, 255, 0.07);
+  --ifm-pre-background: var(--mlcil-surface-sunken);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: -0.012em;
+}
+
+/* ---------------------------------------------------------------- layout - */
+
+.mlcil-container {
+  max-width: var(--mlcil-maxw);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.mlcil-section {
+  padding: 4.5rem 0;
+}
+
+.mlcil-section--sunken {
+  background: var(--mlcil-surface-sunken);
+  border-top: 1px solid var(--mlcil-border);
+  border-bottom: 1px solid var(--mlcil-border);
+}
+
+/* Accent rule that sits above a section heading. */
+.mlcil-accent-bar {
+  display: block;
+  width: 4.5rem;
+  height: 3px;
+  margin-bottom: 1rem;
+  background: var(--mlcil-accent);
+}
+
+.mlcil-section-title {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.7rem, 1.2rem + 1.6vw, 2.25rem);
+}
+
+.mlcil-section-lead {
+  max-width: 62ch;
+  margin: 0;
+  color: var(--mlcil-ink-muted);
+  font-size: 1.05rem;
+}
+
+.mlcil-section-head {
+  margin-bottom: 2.5rem;
+}
+
+.mlcil-section-head-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem 2rem;
+}
+
+.mlcil-section-action {
+  flex: none;
+  padding-bottom: 0.35rem;
+}
+
+/* ----------------------------------------------------------------- cards - */
+
+.mlcil-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1.5rem;
+  background: var(--mlcil-surface-raised);
+  border: 1px solid var(--mlcil-border);
+  border-radius: var(--mlcil-radius);
+  box-shadow: var(--mlcil-shadow);
+  transition: transform 160ms ease, box-shadow 160ms ease,
+    border-color 160ms ease;
+}
+
+a.mlcil-card,
+a.mlcil-card:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+a.mlcil-card:hover,
+.mlcil-card--interactive:hover {
+  transform: translateY(-3px);
+  border-color: var(--mlcil-border-strong);
+  box-shadow: var(--mlcil-shadow-lifted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  a.mlcil-card:hover,
+  .mlcil-card--interactive:hover {
+    transform: none;
+  }
+}
+
+/* ------------------------------------------------------------------ tags - */
+
+.mlcil-tag {
+  display: inline-block;
+  padding: 0.15rem 0.55rem;
+  font-size: 0.74rem;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--mlcil-ink-muted);
+  background: var(--mlcil-surface-sunken);
+  border: 1px solid var(--mlcil-border);
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.mlcil-tag--accent {
+  color: var(--mlcil-accent-text);
+  background: var(--mlcil-accent-soft);
+  border-color: transparent;
+}
+
+.mlcil-tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+/* ----------------------------------------------------------------- links - */
+
+.mlcil-arrow-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.mlcil-arrow-link::after {
+  content: '→';
+  transition: transform 160ms ease;
+}
+
+.mlcil-arrow-link:hover {
+  text-decoration: none;
+}
+
+.mlcil-arrow-link:hover::after {
+  transform: translateX(3px);
+}
+
+/* ---------------------------------------------------------------- navbar - */
+
+.navbar {
+  border-bottom: 1px solid var(--mlcil-border);
+}
+
+/* The logo is a wordmark, so it carries the site identity on its own and needs
+   a little more room than a bare icon would. */
+.navbar__logo {
+  height: 2.75rem;
+  margin-right: 0;
+}
+
+.navbar__logo img {
+  height: 100%;
+  width: auto;
+}
+
+.navbar__brand {
+  margin-right: 1.25rem;
+}
+
+/* Icon-only navbar link to the lab GitHub organization. */
+.navbar-github-link {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-github-link::before {
+  content: '';
+  width: 22px;
+  height: 22px;
+  background: currentColor;
+  -webkit-mask: var(--mlcil-github-mask) center / contain no-repeat;
+  mask: var(--mlcil-github-mask) center / contain no-repeat;
+}
+
+:root {
+  --mlcil-github-mask: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.9 1.2 1.9 1.2 1.1 1.9 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2 0-.4-.5-1.6.2-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.6.2 2.8.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3'/%3E%3C/svg%3E");
+}
+
+/* ---------------------------------------------------------------- footer - */
+
+.footer {
+  border-top: 1px solid var(--mlcil-border);
+}
+
+/* The footer is configured as `style: 'light'`, so Infima hardcodes near-black
+   text on it. Remap every footer variable to the brand tokens so the same
+   footer reads correctly in both themes. */
+.footer--light {
+  --ifm-footer-background-color: var(--mlcil-surface-sunken);
+  --ifm-footer-color: var(--mlcil-ink-muted);
+  --ifm-footer-link-color: var(--mlcil-ink-muted);
+  --ifm-footer-link-hover-color: var(--ifm-color-primary);
+  --ifm-footer-title-color: var(--mlcil-ink);
+}
+
+.footer__copyright {
+  color: var(--mlcil-ink-muted);
+  font-size: 0.88rem;
+}
+
+/* ------------------------------------------------------------------ misc - */
+
+.mlcil-prose a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Docusaurus renders blog/doc content inside .markdown */
+.markdown h1:first-child {
+  --ifm-h1-font-size: 2.4rem;
 }

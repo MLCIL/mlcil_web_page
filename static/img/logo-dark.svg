@@ -3,7 +3,7 @@
    viewBox="0 0 275.15585 240.14292"
    version="1.1"
    id="svg2"
-   sodipodi:docname="MLCIL.svg"
+   sodipodi:docname="MLCIL-inv.svg"
    inkscape:export-filename="MLCIL-inv.png"
    inkscape:export-xdpi="1536"
    inkscape:export-ydpi="1536"
@@ -51,7 +51,7 @@
      d="m 82.562795,18.244351 c -0.184871,0.04163 -0.367851,0.09121 -0.548471,0.14854 -0.388716,-0.0088 -0.777453,0.01677 -1.161684,0.07617 -0.360987,0.140642 -0.708907,0.312701 -1.039803,0.514191 -0.277833,0.113575 -0.547612,0.245928 -0.807485,0.396118 -0.885606,0.54417 -1.630668,1.289218 -2.174829,2.174837 L 57.302695,55.376551 21.861598,116.75953 c -1.02691,1.87834 -1.082247,4.13727 -0.148541,6.06364 0.113575,0.27783 0.245922,0.54761 0.396108,0.80748 0.544172,0.88561 1.289224,1.63067 2.174849,2.17483 0.915215,0.49547 1.934342,0.76819 2.974689,0.79604 0.296766,8.8e-4 0.593254,-0.0175 0.887459,-0.0571 h 0.0076 c 0.759848,-0.0688 1.502068,-0.26863 2.193882,-0.59036 0.275126,-0.11271 0.542351,-0.24372 0.79986,-0.3923 0.887444,-0.54479 1.633872,-1.29121 2.178651,-2.17865 L 64.413758,69.53776 88.298894,28.173951 c 0.215917,-0.375199 0.394528,-0.770671 0.53324,-1.180735 0.861289,-2.536208 0.109597,-5.341513 -1.904425,-7.107262 -0.324773,-0.286424 -0.676867,-0.54029 -1.051236,-0.757956 h -0.0039 c -0.751516,-0.434126 -1.581077,-0.716251 -2.441449,-0.830325 h -0.0039 c -0.178046,0.0043 -0.356013,0.0156 -0.53322,0.03428 -0.109792,-0.03206 -0.220188,-0.06127 -0.331384,-0.0876 z"
      id="path30" /><text
      xml:space="preserve"
-     style="font-weight:bold;font-size:58.6667px;font-family:'Courier New','Liberation Mono','Nimbus Mono PS','DejaVu Sans Mono',monospace;-inkscape-font-specification:'Courier New, Bold';text-align:start;letter-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:start;display:inline;fill:#212c3f;fill-opacity:1;fill-rule:evenodd;stroke:#8cf464;stroke-width:21.837;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:30;stroke-dasharray:none;stroke-opacity:1"
+     style="font-weight:bold;font-size:58.6667px;font-family:'Courier New','Liberation Mono','Nimbus Mono PS','DejaVu Sans Mono',monospace;-inkscape-font-specification:'Courier New, Bold';text-align:start;letter-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:start;display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#8cf464;stroke-width:21.837;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:30;stroke-dasharray:none;stroke-opacity:1"
      x="50.86694"
      y="137.44516"
      id="text15"><tspan
@@ -59,4 +59,4 @@
        id="tspan15"
        x="50.86694"
        y="137.44516"
-       style="font-size:58.6667px;fill:#212c3f;fill-opacity:1;stroke:none;stroke-width:21.837">MLCIL</tspan></text></svg>
+       style="font-size:58.6667px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:21.837">MLCIL</tspan></text></svg>
