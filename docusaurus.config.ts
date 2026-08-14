@@ -109,6 +109,7 @@ const config: Config = {
         { to: '/publications', label: 'Publications', position: 'left' },
         { to: '/software', label: 'Software', position: 'left' },
         { to: '/people', label: 'People', position: 'left' },
+        { to: '/grants', label: 'Grants', position: 'left' },
         { to: '/blog', label: 'Blog', position: 'left' },
         {
           href: 'https://github.com/MLCIL',
@@ -127,6 +128,7 @@ const config: Config = {
             { label: 'Research', to: '/research' },
             { label: 'Publications', to: '/publications' },
             { label: 'People', to: '/people' },
+            { label: 'Grants', to: '/grants' },
             { label: 'Blog', to: '/blog' },
           ],
         },

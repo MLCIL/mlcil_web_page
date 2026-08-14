@@ -204,24 +204,4 @@ export const PUBLICATIONS: Publication[] = [
       { label: 'Code', href: 'https://github.com/j-adamczyk/LTP' },
     ],
   },
-  {
-    title:
-      'Application of Graph Neural Networks and graph descriptors for graph classification',
-    authors: ['J. Adamczyk'],
-    venue: 'arXiv preprint',
-    year: 2022,
-    type: 'preprint',
-    topics: ['Graph ML'],
-    links: [{ label: 'arXiv', href: 'https://arxiv.org/abs/2211.03666' }],
-  },
-  {
-    title:
-      'Comparison of manual and automated feature engineering for daily activity classification in mental disorder diagnosis',
-    authors: ['J. Adamczyk', 'F. Malawski'],
-    venue: 'Computing and Informatics, vol. 40(4), 850',
-    year: 2021,
-    type: 'journal',
-    topics: ['Applied ML'],
-    links: [{ label: 'Paper', href: 'https://doi.org/10.31577/cai_2021_4_850' }],
-  },
 ];

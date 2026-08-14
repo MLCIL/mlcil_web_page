@@ -33,13 +33,6 @@ export default function ResearchPage(): ReactNode {
                     {area.title}
                   </Heading>
                   <p className={styles.areaSummary}>{area.summary}</p>
-                  <div className="mlcil-tag-row">
-                    {area.keywords.map((keyword) => (
-                      <span key={keyword} className="mlcil-tag">
-                        {keyword}
-                      </span>
-                    ))}
-                  </div>
                   <div className={styles.areaLinks}>
                     {area.topic && (
                       <Link

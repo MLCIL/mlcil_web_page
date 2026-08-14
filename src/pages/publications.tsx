@@ -64,9 +64,7 @@ export default function PublicationsPage(): ReactNode {
     <Layout
       title="Publications"
       description="Peer-reviewed papers and preprints from the Machine Learning and Chemoinformatics Lab, AGH University of Krakow.">
-      <PageHeader
-        title="Papers & preprints"
-        lead="Journal articles, conference papers and preprints, newest first. Each entry links to the published version, the preprint and the code where these exist.">
+      <PageHeader title="Papers & preprints">
         <dl className={styles.metrics}>
           <div>
             <dt>{PUBLICATIONS.length}</dt>

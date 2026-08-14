@@ -5,11 +5,15 @@ import type { ReactNode } from 'react';
  * `currentColor` so they inherit the surrounding text color in both themes.
  */
 const PATHS: Record<string, ReactNode> = {
+  /* Ball-and-stick molecule: a central atom bonded to three others, with the
+     bonds stopping at the atom outlines so nothing is drawn through a circle. */
   molecule: (
     <>
-      <path d="M12 3.2 19 7.4v8.4L12 20l-7-4.2V7.4l7-4.2Z" />
-      <path d="M12 3.2v4.4M19 7.4l-3.8 2.2M19 15.8l-3.8-2.2M12 20v-4.4M5 15.8l3.8-2.2M5 7.4l3.8 2.2" />
-      <circle cx="12" cy="11.6" r="2.2" />
+      <path d="M9.98 10.7 6.6 8.53M14.08 10.81l3.27-1.87M12 14.4V18.1" />
+      <circle cx="12" cy="12" r="2.4" />
+      <circle cx="5" cy="7.5" r="1.9" />
+      <circle cx="19" cy="8" r="1.9" />
+      <circle cx="12" cy="20" r="1.9" />
     </>
   ),
   graph: (
