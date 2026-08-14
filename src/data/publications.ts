@@ -1,9 +1,7 @@
 /**
  * Publication list, newest first.
  *
- * To add a paper: prepend an entry, list authors as "F. Lastname", and add the
- * lab members' names to LAB_AUTHORS so they get emphasised in the rendered
- * author line.
+ * To add a paper: prepend an entry and list authors as "F. Lastname".
  */
 
 export type PublicationType = 'journal' | 'conference' | 'preprint';
@@ -21,18 +19,7 @@ export type Publication = {
   type: PublicationType;
   topics: string[];
   links: PublicationLink[];
-  /** Highlighted on the homepage. */
-  selected?: boolean;
 };
-
-/** Names rendered in bold in author lines. */
-export const LAB_AUTHORS = [
-  'J. Adamczyk',
-  'P. Ludynia',
-  'A. Staniszewski',
-  'M. Praski',
-  'F. Job',
-];
 
 export const TOPICS = [
   'Chemoinformatics',
@@ -56,7 +43,6 @@ export const PUBLICATIONS: Publication[] = [
       { label: 'arXiv', href: 'https://arxiv.org/abs/2608.02027' },
       { label: 'Code', href: 'https://github.com/MLCIL/scikit-fingerprints' },
     ],
-    selected: true,
   },
   {
     title: 'Molecular fingerprints are strong models for peptide function prediction',
@@ -67,7 +53,7 @@ export const PUBLICATIONS: Publication[] = [
     topics: ['Chemoinformatics', 'Benchmarks & datasets'],
     links: [
       {
-        label: 'DOI',
+        label: 'Paper',
         href: 'https://academic.oup.com/bioinformatics/article/42/5/btag179/8653978',
       },
       { label: 'arXiv', href: 'https://arxiv.org/abs/2501.17901' },
@@ -76,7 +62,6 @@ export const PUBLICATIONS: Publication[] = [
         href: 'https://github.com/MLCIL/peptides_molecular_fingerprints_classification',
       },
     ],
-    selected: true,
   },
   {
     title:
@@ -88,12 +73,11 @@ export const PUBLICATIONS: Publication[] = [
     topics: ['Ecotoxicology', 'Chemoinformatics'],
     links: [
       {
-        label: 'DOI',
+        label: 'Paper',
         href: 'https://www.sciencedirect.com/science/article/pii/S0147651326001983',
       },
       { label: 'arXiv', href: 'https://arxiv.org/abs/2503.24305' },
     ],
-    selected: true,
   },
   {
     title:
@@ -104,7 +88,6 @@ export const PUBLICATIONS: Publication[] = [
     type: 'preprint',
     topics: ['Applied ML'],
     links: [{ label: 'arXiv', href: 'https://arxiv.org/abs/2607.09196' }],
-    selected: true,
   },
   {
     title:
@@ -116,7 +99,7 @@ export const PUBLICATIONS: Publication[] = [
     type: 'conference',
     topics: ['Ecotoxicology', 'Graph ML'],
     links: [
-      { label: 'DOI', href: 'https://dl.acm.org/doi/10.1145/3746252.3761660' },
+      { label: 'Paper', href: 'https://dl.acm.org/doi/10.1145/3746252.3761660' },
       { label: 'arXiv', href: 'https://arxiv.org/abs/2509.18703' },
     ],
   },
@@ -141,7 +124,6 @@ export const PUBLICATIONS: Publication[] = [
         href: 'https://huggingface.co/datasets/scikit-fingerprints/MolPILE',
       },
     ],
-    selected: true,
   },
   {
     title:
@@ -158,7 +140,6 @@ export const PUBLICATIONS: Publication[] = [
         href: 'https://github.com/MLCIL/benchmarking_molecular_models',
       },
     ],
-    selected: true,
   },
   {
     title:
@@ -169,12 +150,11 @@ export const PUBLICATIONS: Publication[] = [
     type: 'journal',
     topics: ['Benchmarks & datasets', 'Ecotoxicology'],
     links: [
-      { label: 'DOI', href: 'https://www.nature.com/articles/s41597-024-04232-w' },
+      { label: 'Paper', href: 'https://www.nature.com/articles/s41597-024-04232-w' },
       { label: 'arXiv', href: 'https://arxiv.org/abs/2404.16196' },
       { label: 'Code', href: 'https://github.com/j-adamczyk/ApisTox_dataset' },
       { label: 'UCI', href: 'https://archive.ics.uci.edu/dataset/995/apistox' },
     ],
-    selected: true,
   },
   {
     title:
@@ -186,13 +166,12 @@ export const PUBLICATIONS: Publication[] = [
     topics: ['Open-source software', 'Chemoinformatics'],
     links: [
       {
-        label: 'DOI',
+        label: 'Paper',
         href: 'https://www.sciencedirect.com/science/article/pii/S2352711024003145',
       },
       { label: 'arXiv', href: 'https://arxiv.org/abs/2407.13291' },
       { label: 'Code', href: 'https://github.com/MLCIL/scikit-fingerprints' },
     ],
-    selected: true,
   },
   {
     title:
@@ -203,11 +182,10 @@ export const PUBLICATIONS: Publication[] = [
     type: 'conference',
     topics: ['Graph ML', 'Chemoinformatics'],
     links: [
-      { label: 'DOI', href: 'https://ebooks.iospress.nl/doi/10.3233/FAIA240663' },
+      { label: 'Paper', href: 'https://ebooks.iospress.nl/doi/10.3233/FAIA240663' },
       { label: 'arXiv', href: 'https://arxiv.org/abs/2407.12136' },
       { label: 'Code', href: 'https://github.com/j-adamczyk/MOLTOP' },
     ],
-    selected: true,
   },
   {
     title:
@@ -219,7 +197,7 @@ export const PUBLICATIONS: Publication[] = [
     topics: ['Graph ML'],
     links: [
       {
-        label: 'DOI',
+        label: 'Paper',
         href: 'https://link.springer.com/chapter/10.1007/978-3-031-36027-5_47',
       },
       { label: 'arXiv', href: 'https://arxiv.org/abs/2305.00724' },
@@ -244,8 +222,6 @@ export const PUBLICATIONS: Publication[] = [
     year: 2021,
     type: 'journal',
     topics: ['Applied ML'],
-    links: [{ label: 'DOI', href: 'https://doi.org/10.31577/cai_2021_4_850' }],
+    links: [{ label: 'Paper', href: 'https://doi.org/10.31577/cai_2021_4_850' }],
   },
 ];
-
-export const SELECTED_PUBLICATIONS = PUBLICATIONS.filter((p) => p.selected);

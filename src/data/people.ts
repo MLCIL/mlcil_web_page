@@ -2,7 +2,7 @@
  * Lab members.
  *
  * Add a person by dropping an entry into the right array. `photo` is optional:
- * without it the site renders a hexagonal monogram in the lab colours. Photos
+ * without it the site renders a hexagonal monogram in the lab colors. Photos
  * go in `static/img/people/` and are referenced as `img/people/<file>` (square
  * images, at least 400x400, look best).
  */

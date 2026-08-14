@@ -30,7 +30,7 @@ ones you normally need to touch.
 | Software, datasets, paper code | `src/data/software.ts` |
 | Research areas | `src/data/research.ts` |
 | Navbar and footer | `docusaurus.config.ts` |
-| Colours, typography, shared UI primitives | `src/css/custom.css` |
+| Colors, typography, shared UI primitives | `src/css/custom.css` |
 | Blog posts | `blog/*.md` |
 
 ### Adding a person
@@ -49,18 +49,17 @@ Add an entry to the relevant group in `src/data/people.ts`:
 ```
 
 Photos go in `static/img/people/`, square and at least 400x400. Without a photo
-the site renders a hexagonal monogram in the lab colours. Groups with no members
+the site renders a hexagonal monogram in the lab colors. Groups with no members
 are skipped, so empty sections can stay in place.
 
 ### Adding a publication
 
-Prepend an entry to `PUBLICATIONS` in `src/data/publications.ts`. Set
-`selected: true` to feature it on the homepage, and make sure every lab member's
-name is listed in `LAB_AUTHORS` so it is emphasised in the author line. The first
-link is used as the paper's primary link (the clickable title), so put the DOI
-there once the paper is published.
+Prepend an entry to `PUBLICATIONS` in `src/data/publications.ts`. The list is
+newest first, and the homepage shows the five most recent entries on its own. The
+first link is used as the paper's primary link (the clickable title), so put the
+published version there once the paper is out.
 
-The counters on the homepage and the publications page are derived from these
+The counters on the publications page are derived from these
 data files, so they stay correct on their own. There is nothing to update by
 hand.
 

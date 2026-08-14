@@ -4,7 +4,6 @@ import Heading from '@theme/Heading';
 
 type SectionProps = {
   id?: string;
-  eyebrow?: string;
   title?: ReactNode;
   lead?: ReactNode;
   /** Renders on a tinted background with hairline rules. */
@@ -20,7 +19,6 @@ type SectionProps = {
  */
 export default function Section({
   id,
-  eyebrow,
   title,
   lead,
   sunken,
@@ -28,7 +26,7 @@ export default function Section({
   className,
   children,
 }: SectionProps): ReactNode {
-  const hasHead = Boolean(eyebrow || title || lead || action);
+  const hasHead = Boolean(title || lead || action);
   return (
     <section
       id={id}
@@ -42,7 +40,7 @@ export default function Section({
           <div className="mlcil-section-head">
             <div className="mlcil-section-head-row">
               <div>
-                {eyebrow && <p className="mlcil-eyebrow">{eyebrow}</p>}
+                <span className="mlcil-accent-bar" aria-hidden="true" />
                 {title && (
                   <Heading as="h2" className="mlcil-section-title">
                     {title}

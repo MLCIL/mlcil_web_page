@@ -13,11 +13,9 @@ export default function ResearchPage(): ReactNode {
   return (
     <Layout
       title="Research"
-      description="Research areas of the Machine Learning and Chemoinformatics Lab: molecular representation learning, graph ML, evaluation and benchmarking, applied chemoinformatics, applied machine learning and open source scientific software.">
+      description="Research areas of the Machine Learning and Chemoinformatics Lab: chemoinformatics, graph machine learning, evaluation and benchmarking, applied machine learning and open source scientific software.">
       <PageHeader
-        eyebrow="Research"
-        title="What we work on"
-        lead="We work on the whole chain: how to turn the data into something a model can use, which model to pick, how to tell whether it actually works, and what other people need in order to repeat any of it. Most of that involves molecules, though not all of it."
+        title="Research areas"
       />
 
       <main className="mlcil-section">

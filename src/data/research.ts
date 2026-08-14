@@ -21,12 +21,17 @@ export type ResearchArea = {
 
 export const RESEARCH_AREAS: ResearchArea[] = [
   {
-    id: 'molecular-representation',
+    id: 'chemoinformatics',
     icon: 'molecule',
-    title: 'Molecular representation learning',
+    title: 'Chemoinformatics',
     summary:
-      'Before any model can run, a molecule has to be turned into numbers. We compare the ways of doing that, from fingerprints and descriptors to graph networks and pretrained encoders, testing them on the same data under the same conditions. We are also interested in how much a pretrained model really buys you on a new task.',
-    keywords: ['Fingerprints', 'Descriptors', 'Pretrained models', 'Transfer learning'],
+      'Molecular property prediction and applications: molecular fingerprints, physicochemical descriptors, and pretrained molecular foundation models. We apply them to concrete problems and domains like ecotoxicology and peptide function prediction.',
+    keywords: [
+      'Molecular fingerprints',
+      'Pretrained molecular foundation models',
+      'Ecotoxicology',
+      'Peptide function prediction',
+    ],
     topic: 'Chemoinformatics',
   },
   {
@@ -34,35 +39,39 @@ export const RESEARCH_AREAS: ResearchArea[] = [
     icon: 'graph',
     title: 'Graph machine learning',
     summary:
-      'A molecule is a graph, so predicting its properties is a graph learning problem. We work on graph neural networks and on much simpler descriptors computed from graph structure. The simple methods turn out to be competitive more often than people expect, which is worth knowing before reaching for something heavier.',
-    keywords: ['GNNs', 'Graph kernels', 'Topological descriptors', 'Graph classification'],
+      'Graph theory and learning on graphs: topological descriptors, graph neural networks, graph classification. We research structural baselines and graph-theoretic aspects.',
+    keywords: [
+      'Topological graph descriptors',
+      'GNNs',
+      'Graph classification',
+    ],
     topic: 'Graph ML',
   },
   {
     id: 'evaluation',
     icon: 'benchmark',
-    title: 'Evaluation, benchmarks and datasets',
+    title: 'Benchmarking, datasets, and evaluation',
     summary:
-      'Results in molecular ML are hard to compare, and some of them stop looking impressive once the baselines are tuned properly. We build datasets and evaluation setups that make comparisons possible, and then use them to re-check what has already been published.',
-    keywords: ['Benchmarking', 'Reproducibility', 'Model selection', 'Statistical comparison'],
+      'Constructing benchmarks and datasets for machine learning and chemoinformatics. We focus on fair evaluation, strong baselines, and statistical analysis methods.',
+    keywords: [
+      'Benchmarking',
+      'Reproducibility',
+      'Model selection',
+      'Statistical comparison',
+    ],
     topic: 'Benchmarks & datasets',
-  },
-  {
-    id: 'applications',
-    icon: 'flask',
-    title: 'Applied chemoinformatics',
-    summary:
-      'We work with people who have an actual prediction problem: which pesticides are dangerous to bees, what a peptide does, whether a compound is worth testing at all. They bring the chemistry and the questions, we bring the modelling.',
-    keywords: ['Ecotoxicology', 'Agrochemistry', 'Property prediction', 'Screening'],
-    topic: 'Ecotoxicology',
   },
   {
     id: 'applied-ml',
     icon: 'series',
-    title: 'Machine learning outside chemistry',
+    title: 'Applied machine learning',
     summary:
-      'Not everything we do involves molecules. The same methods and the same care about evaluation apply elsewhere, so we also work on sensor data, tabular problems and occasionally something lighter, such as predicting how difficult a monster is in a tabletop RPG.',
-    keywords: ['Tabular learning', 'Feature engineering', 'Time series', 'Applications'],
+      'Predictive modeling and novel artificial intelligence applications.',
+    keywords: [
+      'Tabular learning',
+      'Feature engineering',
+      'Applied ML',
+    ],
     topic: 'Applied ML',
   },
   {
@@ -70,8 +79,12 @@ export const RESEARCH_AREAS: ResearchArea[] = [
     icon: 'code',
     title: 'Open source scientific software',
     summary:
-      'We put real time into the software, not only the papers. Our libraries are tested, documented and packaged so that chemoinformatics fits into an ordinary scikit-learn pipeline, and every paper comes with the code that produced its results.',
-    keywords: ['Python', 'scikit-learn', 'Packaging', 'Reproducibility'],
+      'Software for chemoinformatics, machine learning, and data processing. We provide high-quality libraries and reproducible pipelines.',
+    keywords: [
+      'Open source',
+      'Libraries',
+      'Reproducibility'
+    ],
     topic: 'Open-source software',
     links: [{ label: 'Software and datasets', to: '/software' }],
   },

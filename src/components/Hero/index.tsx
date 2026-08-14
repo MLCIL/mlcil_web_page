@@ -3,8 +3,6 @@ import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import Heading from '@theme/Heading';
 import { LAB } from '@site/src/data/lab';
-import { PUBLICATIONS } from '@site/src/data/publications';
-import { SOFTWARE } from '@site/src/data/software';
 
 import styles from './styles.module.css';
 
@@ -13,7 +11,7 @@ import styles from './styles.module.css';
  * Purely ornamental, hence aria-hidden.
  */
 
-// Flat-top hexagon, side 20 => tile of 60 x 34.64 with centres at the four
+// Flat-top hexagon, side 20 => tile of 60 x 34.64 with centers at the four
 // tile corners plus the middle. Content outside a pattern tile is clipped
 // rather than wrapped, so every partially visible hexagon is drawn explicitly.
 const HEX_SIDE = 20;
@@ -64,17 +62,6 @@ function Lattice(): ReactNode {
   );
 }
 
-// Lab-level counts, derived from the data files so they never go stale.
-const METRICS = [
-  { value: `${PUBLICATIONS.length}`, label: 'Publications' },
-  { value: `${SOFTWARE.length}`, label: 'Open-source releases' },
-  {
-    value: `${SOFTWARE.filter((project) => project.kind === 'dataset').length}`,
-    label: 'Public datasets',
-  },
-  { value: '30+', label: 'Fingerprints in scikit-fingerprints' },
-];
-
 export default function Hero(): ReactNode {
   return (
     <header className={styles.hero}>
@@ -84,30 +71,23 @@ export default function Hero(): ReactNode {
           {LAB.faculty} · {LAB.institution}
         </p>
         <Heading as="h1" className={styles.title}>
-          Machine Learning and
-          <br />
-          Chemoinformatics Lab
+          Machine Learning and Chemoinformatics Lab (MLCIL)
         </Heading>
         <p className={styles.tagline}>{LAB.tagline}</p>
         <div className={styles.actions}>
           <Link className={styles.primaryButton} to="/research">
-            Our research
+            Main research areas
           </Link>
-          <Link className={styles.ghostButton} to="/publications">
+          <Link className={styles.softButton} to="/publications">
             Publications
           </Link>
-          <Link className={styles.ghostButton} to="/software">
+          <Link className={styles.softButton} to="/software">
             Software
           </Link>
+          <Link className={styles.softButton} to="/people">
+            People
+          </Link>
         </div>
-        <dl className={styles.metrics}>
-          {METRICS.map((metric) => (
-            <div key={metric.label} className={styles.metric}>
-              <dt className={styles.metricValue}>{metric.value}</dt>
-              <dd className={styles.metricLabel}>{metric.label}</dd>
-            </div>
-          ))}
-        </dl>
       </div>
     </header>
   );

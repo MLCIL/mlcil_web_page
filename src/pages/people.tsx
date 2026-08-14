@@ -18,7 +18,6 @@ export default function PeoplePage(): ReactNode {
       title="People"
       description={`Members of the Machine Learning and Chemoinformatics Lab at ${LAB.institution}.`}>
       <PageHeader
-        eyebrow="People"
         title="The lab"
         lead={`MLCIL is based at the ${LAB.faculty}, ${LAB.institution}. We work with collaborators in chemistry, biology and computer science.`}
       />
@@ -56,7 +55,7 @@ export default function PeoplePage(): ReactNode {
             </p>
             <div className={styles.joinLinks}>
               <a href={LAB.github} target="_blank" rel="noreferrer">
-                GitHub organisation
+                GitHub organization
               </a>
               <Link to="/publications">Publications</Link>
               {LAB.email && <a href={`mailto:${LAB.email}`}>{LAB.email}</a>}

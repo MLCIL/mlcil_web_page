@@ -7,7 +7,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'Machine Learning and Chemoinformatics Lab',
   tagline:
-    'We build machine learning models for molecules, check whether they really work, and release the code',
+    'Research group focused on chemoinformatics, applied artificial intelligence, and open science',
   favicon: 'img/logo.svg',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -65,6 +65,9 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
+
+  // Exposes the blog post list as global data, for the homepage teaser.
+  plugins: ['./plugins/blog-index'],
 
   themeConfig: {
     // Social preview card (og:image / twitter:image). Must stay a raster
@@ -135,23 +138,7 @@ const config: Config = {
               label: 'scikit-fingerprints',
               href: 'https://github.com/MLCIL/scikit-fingerprints',
             },
-            { label: 'GitHub organisation', href: 'https://github.com/MLCIL' },
-          ],
-        },
-        {
-          title: 'Elsewhere',
-          items: [
-            {
-              label: 'AGH University of Krakow',
-              href: 'https://www.agh.edu.pl/en',
-            },
-            {
-              label: 'Faculty of Computer Science',
-              href: 'https://informatyka.agh.edu.pl/en/',
-            },
-            // `pathname://` keeps this out of the router: the feed is a build
-            // artifact, not a route, so the link checker cannot see it.
-            { label: 'Blog RSS feed', to: 'pathname:///blog/rss.xml' },
+            { label: 'GitHub organization', href: 'https://github.com/MLCIL' },
           ],
         },
       ],

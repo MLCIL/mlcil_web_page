@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 
 /**
  * Line-art icons for the research areas. Drawn on a 24x24 grid, stroked with
- * `currentColor` so they inherit the surrounding text colour in both themes.
+ * `currentColor` so they inherit the surrounding text color in both themes.
  */
 const PATHS: Record<string, ReactNode> = {
   molecule: (

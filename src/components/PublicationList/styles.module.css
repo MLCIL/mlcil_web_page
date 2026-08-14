@@ -80,11 +80,6 @@
   color: var(--mlcil-ink-muted);
 }
 
-.labAuthor {
-  font-weight: 600;
-  color: var(--mlcil-ink);
-}
-
 .venue {
   display: flex;
   flex-wrap: wrap;

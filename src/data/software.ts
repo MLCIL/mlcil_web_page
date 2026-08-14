@@ -13,7 +13,7 @@ export type SoftwareProject = {
   description?: string;
   language?: string;
   license?: string;
-  kind: 'library' | 'dataset' | 'paper code';
+  kind: 'software' | 'dataset' | 'paper code';
   links: SoftwareLink[];
   featured?: boolean;
 };
@@ -21,7 +21,7 @@ export type SoftwareProject = {
 export const SOFTWARE: SoftwareProject[] = [
   {
     name: 'scikit-fingerprints',
-    kind: 'library',
+    kind: 'software',
     language: 'Python',
     license: 'MIT',
     summary:
@@ -43,7 +43,7 @@ export const SOFTWARE: SoftwareProject[] = [
     name: 'MolPILE',
     kind: 'dataset',
     summary:
-      'Large and diverse set of molecules for pretraining molecular models.',
+      'Large-scale, diverse dataset for pretraining molecular models.',
     description:
       'A deduplicated pretraining set built from public chemical databases, put together so that molecular encoders see a wide range of chemistry rather than whatever happens to be popular.',
     links: [
@@ -72,7 +72,7 @@ export const SOFTWARE: SoftwareProject[] = [
   },
   {
     name: 'bbt-test',
-    kind: 'library',
+    kind: 'software',
     language: 'Python',
     license: 'MIT',
     summary:

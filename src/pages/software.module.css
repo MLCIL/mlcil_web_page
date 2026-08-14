@@ -36,9 +36,8 @@
 
 .name {
   margin: 0;
-  font-family: var(--ifm-font-family-monospace);
-  font-size: 1.05rem;
-  font-weight: 500;
+  font-size: 1.15rem;
+  font-weight: 600;
 }
 
 .summary {

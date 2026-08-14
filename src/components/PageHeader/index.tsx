@@ -4,7 +4,6 @@ import Heading from '@theme/Heading';
 import styles from './styles.module.css';
 
 type PageHeaderProps = {
-  eyebrow: string;
   title: string;
   lead?: ReactNode;
   children?: ReactNode;
@@ -15,7 +14,6 @@ type PageHeaderProps = {
  * tinted background, hairline rule, no artwork.
  */
 export default function PageHeader({
-  eyebrow,
   title,
   lead,
   children,
@@ -23,7 +21,7 @@ export default function PageHeader({
   return (
     <header className={styles.header}>
       <div className="mlcil-container">
-        <p className="mlcil-eyebrow">{eyebrow}</p>
+        <span className="mlcil-accent-bar" aria-hidden="true" />
         <Heading as="h1" className={styles.title}>
           {title}
         </Heading>

@@ -1,8 +1,5 @@
 import type { ReactNode } from 'react';
-import { Fragment } from 'react';
-import clsx from 'clsx';
 import {
-  LAB_AUTHORS,
   type Publication,
   type PublicationType,
 } from '@site/src/data/publications';
@@ -16,25 +13,16 @@ const TYPE_LABEL: Record<PublicationType, string> = {
 };
 
 function AuthorLine({ authors }: { authors: string[] }): ReactNode {
-  return (
-    <p className={styles.authors}>
-      {authors.map((author, index) => (
-        <Fragment key={author}>
-          {index > 0 && ', '}
-          <span
-            className={clsx(LAB_AUTHORS.includes(author) && styles.labAuthor)}>
-            {author}
-          </span>
-        </Fragment>
-      ))}
-    </p>
-  );
+  return <p className={styles.authors}>{authors.join(', ')}</p>;
 }
 
 export function PublicationEntry({
   publication,
+  showType = true,
 }: {
   publication: Publication;
+  /** The homepage drops the journal/conference/preprint tag. */
+  showType?: boolean;
 }): ReactNode {
   const primaryLink = publication.links[0]?.href;
   return (
@@ -55,10 +43,14 @@ export function PublicationEntry({
         <AuthorLine authors={publication.authors} />
         <p className={styles.venue}>
           <em>{publication.venue}</em>
-          <span className={styles.dot}>·</span>
-          <span className={styles.typeTag}>
-            {TYPE_LABEL[publication.type]}
-          </span>
+          {showType && (
+            <>
+              <span className={styles.dot}>·</span>
+              <span className={styles.typeTag}>
+                {TYPE_LABEL[publication.type]}
+              </span>
+            </>
+          )}
           <span className={styles.yearInline}>{publication.year}</span>
         </p>
         <div className={styles.links}>

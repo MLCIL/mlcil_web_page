@@ -9,19 +9,19 @@ import { SOFTWARE, type SoftwareProject } from '@site/src/data/software';
 import styles from './software.module.css';
 
 const KIND_ORDER: SoftwareProject['kind'][] = [
-  'library',
+  'software',
   'dataset',
   'paper code',
 ];
 
 const KIND_TITLE: Record<SoftwareProject['kind'], string> = {
-  library: 'Libraries',
+  software: 'Libraries',
   dataset: 'Datasets',
   'paper code': 'Paper code',
 };
 
 const KIND_DESCRIPTION: Record<SoftwareProject['kind'], string> = {
-  library: 'Packaged and documented for people outside the lab to use.',
+  software: 'Packaged and documented for people outside the lab to use.',
   dataset: 'Published alongside the paper that describes them.',
   'paper code': 'Code to reproduce the results of a single paper.',
 };
@@ -61,14 +61,13 @@ export default function SoftwarePage(): ReactNode {
       title="Software"
       description="Open source libraries, datasets and reproduction code from the Machine Learning and Chemoinformatics Lab.">
       <PageHeader
-        eyebrow="Open source"
         title="Software and datasets"
         lead={
           <>
             The libraries below are maintained for general use, and every paper
             we publish comes with the code behind it. All of it lives in the{' '}
             <a href={LAB.github} target="_blank" rel="noreferrer">
-              MLCIL GitHub organisation
+              MLCIL GitHub organization
             </a>
             .
           </>
