@@ -81,7 +81,10 @@ const config: Config = {
       },
     ],
     colorMode: {
-      respectPrefersColorScheme: true,
+      // Light by default for everyone, regardless of the OS/browser preference.
+      // The navbar toggle still switches to dark and the choice is remembered.
+      defaultMode: 'light',
+      respectPrefersColorScheme: false,
     },
     navbar: {
       // No `title`: the logo already carries the MLCIL wordmark, so a text

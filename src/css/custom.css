@@ -394,3 +394,17 @@ a.mlcil-card:hover,
 .markdown h1:first-child {
   --ifm-h1-font-size: 2.4rem;
 }
+
+/* Docusaurus hides the navbar colour-mode toggle below 996px and offers it only
+   inside the mobile sidebar. Put it back in the top right on small screens and
+   drop the now-duplicate copy from the sidebar header. The class names are CSS
+   module hashes, hence the attribute selectors. */
+@media (max-width: 996px) {
+  .navbar__items--right > [class*='colorModeToggle_'] {
+    display: inherit;
+  }
+
+  .navbar-sidebar__brand [class*='toggleButton_'] {
+    display: none;
+  }
+}
