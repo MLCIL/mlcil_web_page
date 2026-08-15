@@ -54,7 +54,28 @@ export const PEOPLE_GROUPS: PeopleGroup[] = [
   {
     id: 'phd',
     title: 'PhD students',
-    members: [],
+    members: [
+      {
+        name: 'Piotr Ludynia',
+        role: 'Researcher, Faculty of Computer Science, AGH',
+        photo: 'img/people/Piotr_Ludynia.png',
+        bio: 'Member of MLCIL. Mainly interested in ML algorithm opitmizations, especially in chemoinformatics. One of the original developers of scikit-fingerprints',
+        links: [
+          {
+            label: 'Scholar',
+            href: 'https://scholar.google.com/citations?user=By_zWVoAAAAJ&hl=en',
+          },
+          { 
+            label: 'GitHub', 
+            href: 'https://github.com/my-alaska' 
+          },
+          {
+            label: 'LinkedIn',
+            href: 'https://www.linkedin.com/in/piotr-ludynia/',
+          },
+        ],
+      }
+    ],
   },
   {
     id: 'students',
