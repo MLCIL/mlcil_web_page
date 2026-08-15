@@ -59,7 +59,7 @@ export const PEOPLE_GROUPS: PeopleGroup[] = [
         name: 'Piotr Ludynia',
         role: 'Researcher, Faculty of Computer Science, AGH',
         photo: 'img/people/Piotr_Ludynia.png',
-        bio: 'Member of MLCIL. Mainly interested in ML algorithm opitmizations, especially in chemoinformatics. One of the original developers of scikit-fingerprints',
+        bio: 'One of the original creators of scikit-fingerprints. Mainly interested in ML algorithm opitmizations, especially in chemoinformatics.',
         links: [
           {
             label: 'Scholar',
