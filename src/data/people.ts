@@ -123,7 +123,7 @@ export const PEOPLE_GROUPS: PeopleGroup[] = [
             },
             {
                 name: 'Piotr Ludynia',
-                role: 'Researcher, Faculty of Computer Science, AGH',
+                role: 'PhD student',
                 photo: 'img/people/Piotr_Ludynia.png',
                 bio:
                     'Researching optimizations of ML algorithms, particularly in chemoinformatics. ' +
@@ -148,13 +148,56 @@ export const PEOPLE_GROUPS: PeopleGroup[] = [
                     },
                 ],
             },
+            {
+                name: 'Adam Staniszewski',
+                role: 'PhD student',
+                photo: 'img/people/Adam_Staniszewski.jpg',
+                bio:
+                    'Researching molecular representations and non-typical QSAR/QSPR targets ' +
+                    'like massively multilabel classification and biologic macromolecules. ' +
+                    'Working as a ML Engineer and Chemoinformatician at MatGen.',
+                links: [
+                    {
+                        label: 'LinkedIn',
+                        href: 'https://www.linkedin.com/in/adam-staniszewski-4b0154288/',
+                    },
+                    {
+                        label: 'GitHub',
+                        href: 'https://github.com/StaniszewskiA',
+                    },
+                ],
+            },
         ],
     },
     {
         id: 'students',
         title: 'MSc & BSc students',
-        description: 'Students writing theses or working on research projects with us.',
-        members: [],
+        description: 'Students working on research projects with us.',
+        members: [
+            {
+                name: 'Franciszek Job',
+                role: 'MSc student',
+                photo: 'img/people/Franciszek_Job.jpg',
+                bio:
+                    'My work focuses on high-performance data pipelines and large-scale ' +
+                    'data processing for chemoinformatics. Working as a Software Engineer at ' +
+                    'Software Mansion, and as a freelance full-stack developer at Venti Labs.',
+                links: [
+                    {
+                        label: 'ORCID',
+                        href: 'https://orcid.org/0009-0007-4833-8982',
+                    },
+                    {
+                        label: 'LinkedIn',
+                        href: 'https://www.linkedin.com/in/fjob/',
+                    },
+                    {
+                        label: 'GitHub',
+                        href: 'https://github.com/franciszekjob',
+                    },
+                ],
+            },
+        ],
     },
     {
         id: 'collaborators',
