@@ -18,3 +18,10 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# JetBrains IDEs — keep shared code style / formatter settings, ignore the rest
+/.idea/*
+!/.idea/codeStyles
+!/.idea/prettier.xml
+!/.idea/jsLinters.xml
+!/.idea/inspectionProfiles

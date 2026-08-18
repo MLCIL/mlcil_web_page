@@ -1,42 +1,42 @@
 .group {
-  margin-top: 3.5rem;
+    margin-top: 3.5rem;
 }
 
 .groupTitle {
-  margin: 0 0 0.4rem;
-  padding-bottom: 0.6rem;
-  font-size: 1.4rem;
-  border-bottom: 1px solid var(--mlcil-border);
+    margin: 0 0 0.4rem;
+    padding-bottom: 0.6rem;
+    font-size: 1.4rem;
+    border-bottom: 1px solid var(--mlcil-border);
 }
 
 .groupDescription {
-  margin: 0.75rem 0 0;
-  color: var(--mlcil-ink-muted);
+    margin: 0.75rem 0 0;
+    color: var(--mlcil-ink-muted);
 }
 
 /* Horizontal bars: one full-width row per person, portrait on the left. */
 .grid {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
 }
 
 .join {
-  margin-top: 3.5rem;
-  padding: 2rem;
-  background: var(--mlcil-surface-sunken);
-  border: 1px solid var(--mlcil-border);
-  border-left: 3px solid var(--mlcil-accent);
-  border-radius: var(--mlcil-radius);
+    margin-top: 3.5rem;
+    padding: 2rem;
+    background: var(--mlcil-surface-sunken);
+    border: 1px solid var(--mlcil-border);
+    border-left: 3px solid var(--mlcil-accent);
+    border-radius: var(--mlcil-radius);
 }
 
 .joinTitle {
-  margin: 0 0 0.75rem;
-  font-size: 1.4rem;
+    margin: 0 0 0.75rem;
+    font-size: 1.4rem;
 }
 
 .join p {
-  margin: 0;
-  color: var(--mlcil-ink-muted);
+    margin: 0;
+    color: var(--mlcil-ink-muted);
 }

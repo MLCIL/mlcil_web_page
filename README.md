@@ -1,8 +1,8 @@
 # mlcil.org
 
-Sources for [mlcil.org](https://mlcil.org/), website of the 
+Sources for [mlcil.org](https://mlcil.org/), website of the
 Machine Learning and Chemoinformatics Lab (MLCIL),
-Faculty of  Computer Science, AGH University of Krakow.
+Faculty of Computer Science, AGH University of Krakow.
 Built with [Docusaurus](https://docusaurus.io/).
 
 ## Development

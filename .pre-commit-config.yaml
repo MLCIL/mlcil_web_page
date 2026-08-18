@@ -1,0 +1,35 @@
+default_install_hook_types: [pre-commit]
+
+repos:
+    - repo: https://github.com/pre-commit/pre-commit-hooks
+      rev: v6.0.0
+      hooks:
+          - id: trailing-whitespace
+            exclude: ^(build|\.docusaurus)/
+          - id: end-of-file-fixer
+            exclude: ^(build|\.docusaurus)/
+          - id: check-yaml
+          - id: check-json
+            # tsconfig.json is JSONC (comments); Prettier validates it instead.
+            exclude: ^tsconfig\.json$
+          - id: mixed-line-ending
+            args: [--fix=lf]
+
+    - repo: local
+      hooks:
+          # Prettier is the source of truth for formatting (4-space indent,
+          # see .prettierrc.json). Uses the repo's pinned node_modules so the
+          # hook and `npm run lint` can never disagree on a version.
+          - id: prettier
+            name: prettier
+            entry: npx --no-install prettier --write
+            language: system
+            types_or: [javascript, jsx, ts, tsx, json, css, scss, markdown, mdx, yaml]
+            exclude: ^(package-lock\.json|build/|\.docusaurus/)
+
+          - id: eslint
+            name: eslint
+            entry: npx --no-install eslint --fix --max-warnings=0
+            language: system
+            files: \.(js|mjs|cjs)$
+            exclude: ^(build/|\.docusaurus/)

@@ -4,16 +4,16 @@
  */
 
 export const LAB = {
-  name: 'Machine Learning and Chemoinformatics Lab',
-  shortName: 'MLCIL',
-  institution: 'AGH University of Krakow',
-  faculty: 'Faculty of Computer Science',
-  location: 'Krakow, Poland',
-  tagline:
-    'Research group focused on chemoinformatics, applied artificial intelligence, and open science',
-  description:
-    'MLCIL is a research group at the Faculty of Computer Science, AGH University of Krakow. We work on machine learning for molecules, graph learning, evaluation and benchmarking, applications in other fields, and the open source software behind all of it.',
-  email: 'jadamczy@agh.edu.pl',
-  github: 'https://github.com/MLCIL',
-  linkedin: 'https://www.linkedin.com/company/141523919',
+    name: 'Machine Learning and Chemoinformatics Lab',
+    shortName: 'MLCIL',
+    institution: 'AGH University of Krakow',
+    faculty: 'Faculty of Computer Science',
+    location: 'Krakow, Poland',
+    tagline:
+        'Research group focused on chemoinformatics, applied artificial intelligence, and open science',
+    description:
+        'MLCIL is a research group at the Faculty of Computer Science, AGH University of Krakow. We work on machine learning for molecules, graph learning, evaluation and benchmarking, applications in other fields, and the open source software behind all of it.',
+    email: 'jadamczy@agh.edu.pl',
+    github: 'https://github.com/MLCIL',
+    linkedin: 'https://www.linkedin.com/company/141523919',
 } as const;

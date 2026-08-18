@@ -20,8 +20,7 @@ export const SOFTWARE: SoftwareProject[] = [
     {
         name: 'scikit-fingerprints',
         kind: 'software',
-        summary:
-            'Scikit-learn compatible library for molecular fingerprints and chemoinformatics.',
+        summary: 'Scikit-learn compatible library for molecular fingerprints and chemoinformatics.',
         description:
             'Molecular fingerprints with scikit-learn compatible interface, built on RDKit. Also includes molecular filters, distances and similarities, applicability domain checks, and much more. Easy, efficient, and feature-rich tool for ML in chemoinformatics.',
         links: [
@@ -35,11 +34,10 @@ export const SOFTWARE: SoftwareProject[] = [
         ],
         featured: true,
     },
-        {
+    {
         name: 'bbt-test',
         kind: 'software',
-        summary:
-            'Software suite for Bayesian statistical tests for fair model comparison.',
+        summary: 'Software suite for Bayesian statistical tests for fair model comparison.',
         description:
             'Easy to use library providing Bayesian statistical tests, providing interpretable probabilities instead of raw p-values. Purpose-built for benchmarking and fair comparison of ML models over many datasets. Based on PyMC, with visualization utilities.',
         links: [{label: 'GitHub', href: 'https://github.com/MLCIL/bbt-test'}],
@@ -47,8 +45,7 @@ export const SOFTWARE: SoftwareProject[] = [
     {
         name: 'MolPILE',
         kind: 'dataset',
-        summary:
-            'Large-scale, diverse dataset for pretraining molecular models.',
+        summary: 'Large-scale, diverse dataset for pretraining molecular models.',
         description:
             'Standardized, high-quality small molecules dataset, built from public chemical databases. Ready for training foundation models for molecular representation learning.',
         links: [
@@ -64,8 +61,7 @@ export const SOFTWARE: SoftwareProject[] = [
     {
         name: 'ApisTox',
         kind: 'dataset',
-        summary:
-            'Benchmark dataset of small molecule toxicity to honey bees.',
+        summary: 'Benchmark dataset of small molecule toxicity to honey bees.',
         description:
             'Curated dataset of pesticide toxicity data to honey bees. Predefined train-test splits, ready for benchmarking QSAR/QSPR models.',
         links: [

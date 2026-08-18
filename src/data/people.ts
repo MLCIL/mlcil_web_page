@@ -8,7 +8,7 @@
  */
 
 export type PersonLink = {
-    label: 'Scholar' | 'GitHub' | 'LinkedIn' | 'Website' | 'ORCID' | 'Email';
+    label: 'Google Scholar' | 'GitHub' | 'LinkedIn' | 'Website' | 'ORCID' | 'Email';
     href: string;
 };
 
@@ -32,16 +32,27 @@ export const LAB_LEAD: Person = {
     name: 'Jakub Adamczyk',
     role: 'Lab lead · Researcher, Faculty of Computer Science, AGH',
     photo: 'img/people/Jakub_Adamczyk.jpg',
-    bio: 'Leader and founder of MLCIL. His scientific interests include chemoinformatics, QSAR/QSPR, graph machine learning, and applications of ML in chemoinformatics and other fields.',
+    bio:
+        'Leader and founder of MLCIL. ' +
+        'My scientific interests include chemoinformatics, QSAR/QSPR, graph machine learning, ' +
+        'and applications of ML in chemoinformatics and other fields. ' +
+        'Working as a Senior Chemoinformatician at MatGen.',
     links: [
         {
-            label: 'Scholar',
+            label: 'Google Scholar',
             href: 'https://scholar.google.com/citations?user=7R6gRjMAAAAJ&hl=en',
         },
-        {label: 'GitHub', href: 'https://github.com/j-adamczyk'},
+        {
+            label: 'ORCID',
+            href: 'https://orcid.org/0000-0003-4336-4288',
+        },
         {
             label: 'LinkedIn',
             href: 'https://www.linkedin.com/in/jakub-adamczyk-816566182/',
+        },
+        {
+            label: 'GitHub',
+            href: 'https://github.com/j-adamczyk',
         },
     ],
 };
@@ -51,52 +62,6 @@ export const LAB_LEAD: Person = {
  * safe to leave a section in place until you have someone to put in it.
  */
 export const PEOPLE_GROUPS: PeopleGroup[] = [
-  {
-    id: 'phd',
-    title: 'PhD students',
-    members: [
-      {
-        name: 'Piotr Ludynia',
-        role: 'Researcher, Faculty of Computer Science, AGH',
-        photo: 'img/people/Piotr_Ludynia.png',
-        bio: 'One of the original creators of scikit-fingerprints. Mainly interested in ML algorithm opitmizations, especially in chemoinformatics.',
-        links: [
-          {
-            label: 'Scholar',
-            href: 'https://scholar.google.com/citations?user=By_zWVoAAAAJ&hl=en',
-          },
-          {
-            label: 'GitHub',
-            href: 'https://github.com/my-alaska'
-          },
-          {
-            label: 'LinkedIn',
-            href: 'https://www.linkedin.com/in/piotr-ludynia/',
-          },
-        ],
-      }
-    ],
-  },
-  {
-    id: 'students',
-    title: 'MSc & BSc students',
-    description:
-      'Students writing theses or working on research projects with us.',
-    members: [],
-  },
-  {
-    id: 'collaborators',
-    title: 'Collaborators',
-    description:
-      'People we work with regularly at other institutions.',
-    members: [],
-  },
-  {
-    id: 'alumni',
-    title: 'Alumni',
-    description: 'Former members and where they went next.',
-    members: [],
-  },
     {
         id: 'researcher',
         title: 'Researchers',
@@ -104,11 +69,19 @@ export const PEOPLE_GROUPS: PeopleGroup[] = [
             {
                 name: 'Wojciech Czech',
                 role: 'Researcher, PhD',
-                bio: 'Researcher working on graph machine learning, structural pattern recognition, and complex networks. His work spans graph topological descriptors, molecular graph classification, and exploration of large networks.',
+                bio:
+                    'Researcher working on graph machine learning, structural pattern recognition, ' +
+                    'and complex networks.  My work spans graph topological descriptors, ' +
+                    'molecular graph classification, and exploration of large networks. ' +
+                    'Working as the CTO of Placewise.',
                 links: [
                     {
-                        label: 'Scholar',
+                        label: 'Google Scholar',
                         href: 'https://scholar.google.com/citations?user=g3thwW4AAAAJ&hl=pl&oi=ao',
+                    },
+                    {
+                        label: 'ORCID',
+                        href: 'https://orcid.org/0000-0002-1903-8098',
                     },
                     {
                         label: 'LinkedIn',
@@ -119,22 +92,59 @@ export const PEOPLE_GROUPS: PeopleGroup[] = [
         ],
     },
     {
-        id: 'phd',
+        id: 'phd_students',
         title: 'PhD students',
         members: [
             {
                 name: 'Mateusz Praski',
                 role: 'PhD student',
-                bio: 'Working on molecular representation learning and foundation models for chemistry. His work focuses on benchmarking models and Bayesian statistical analysis for fair evaluation.',
+                bio:
+                    'Researching molecular representation learning and foundation models for ' +
+                    'chemistry. My work focuses on benchmarking models and Bayesian statistical ' +
+                    'analysis for fair evaluation. Working as a Senior ML Specialist at Selvita.',
                 links: [
                     {
-                        label: 'Scholar',
+                        label: 'Google Scholar',
                         href: 'https://scholar.google.com/citations?user=g2evp5gAAAAJ&hl=pl&oi=ao',
                     },
-                    {label: 'GitHub', href: 'https://github.com/Thematiq'},
+                    {
+                        label: 'ORCID',
+                        href: 'https://orcid.org/0009-0006-3956-5377',
+                    },
                     {
                         label: 'LinkedIn',
                         href: 'https://www.linkedin.com/in/mateusz-praski/',
+                    },
+                    {
+                        label: 'GitHub',
+                        href: 'https://github.com/Thematiq',
+                    },
+                ],
+            },
+            {
+                name: 'Piotr Ludynia',
+                role: 'Researcher, Faculty of Computer Science, AGH',
+                photo: 'img/people/Piotr_Ludynia.png',
+                bio:
+                    'Researching optimizations of ML algorithms, particularly in chemoinformatics. ' +
+                    'I am one of the primary developers of scikit-fingerprints. Working as a ' +
+                    'Machine Learning Engineer at Enelpol.',
+                links: [
+                    {
+                        label: 'Google Scholar',
+                        href: 'https://scholar.google.com/citations?user=By_zWVoAAAAJ&hl=en',
+                    },
+                    {
+                        label: 'ORCID',
+                        href: 'https://orcid.org/0009-0004-0749-9569',
+                    },
+                    {
+                        label: 'LinkedIn',
+                        href: 'https://www.linkedin.com/in/piotr-ludynia/',
+                    },
+                    {
+                        label: 'GitHub',
+                        href: 'https://github.com/my-alaska',
                     },
                 ],
             },
@@ -143,15 +153,19 @@ export const PEOPLE_GROUPS: PeopleGroup[] = [
     {
         id: 'students',
         title: 'MSc & BSc students',
-        description:
-            'Students writing theses or working on research projects with us.',
+        description: 'Students writing theses or working on research projects with us.',
         members: [],
     },
     {
         id: 'collaborators',
         title: 'Collaborators',
-        description:
-            'People we work with regularly at other institutions.',
+        description: 'People we work with regularly at other institutions.',
+        members: [],
+    },
+    {
+        id: 'alumni',
+        title: 'Alumni',
+        description: 'Former members and where they went next.',
         members: [],
     },
 ];

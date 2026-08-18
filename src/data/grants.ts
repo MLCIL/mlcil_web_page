@@ -34,8 +34,7 @@ export type Grant = {
 export const GRANTS: Grant[] = [
     {
         id: 'nvidia-peptides',
-        title:
-            'Generation of chemically modified peptides using peptide folding information',
+        title: 'Generation of chemically modified peptides using peptide folding information',
         funder: 'NVIDIA',
         funderShort: 'NVIDIA',
         program: 'Academic Grants Program',
@@ -54,8 +53,7 @@ export const GRANTS: Grant[] = [
     },
     {
         id: 'ncn-opus-agrochemistry',
-        title:
-            'Establishing a benchmarking platform for AI/ML predictive models for bioactivity and toxicity in agrochemistry',
+        title: 'Establishing a benchmarking platform for AI/ML predictive models for bioactivity and toxicity in agrochemistry',
         funder: 'National Science Centre, Poland',
         funderShort: 'NCN',
         program: 'OPUS',
