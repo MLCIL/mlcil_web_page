@@ -82,7 +82,24 @@ export const PEOPLE_GROUPS: PeopleGroup[] = [
     title: 'MSc & BSc students',
     description:
       'Students writing theses or working on research projects with us.',
-    members: [],
+    members: [
+      {
+        name: 'Franciszek Job',
+        role: 'MSc student, Faculty of Computer Science, AGH',
+        photo: 'img/people/Franciszek_Job.jpg',
+        bio: 'His work focuses on high-performance data pipelines and curated datasets for chemoinformatics (co-author of MolPILE).',
+        links: [
+          { 
+            label: 'GitHub', 
+            href: 'https://github.com/franciszekjob' 
+          },
+          {
+            label: 'LinkedIn',
+            href: 'https://www.linkedin.com/in/fjob/',
+          },
+        ],
+      }
+    ],
   },
   {
     id: 'collaborators',
