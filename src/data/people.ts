@@ -171,8 +171,7 @@ export const PEOPLE_GROUPS: PeopleGroup[] = [
     },
     {
         id: 'students',
-        title: 'MSc & BSc students',
-        description: 'Students working on research projects with us.',
+        title: 'Students',
         members: [
             {
                 name: 'Franciszek Job',
@@ -200,6 +199,7 @@ export const PEOPLE_GROUPS: PeopleGroup[] = [
             {
                 name: 'Hubert Miklas',
                 role: 'BSc student',
+                photo: 'img/people/Hubert_Miklas.png',
                 bio:
                     'My work focuses on maximum diversity picking and developing efficient ' +
                     'scientific software. Working as a Software Development Engineer at Remitly.',
