@@ -1,112 +1,107 @@
 /* Every color here comes from a --mlcil-hero-* token so the banner flips with
    the theme: pale blue wash in light mode, deep navy in dark mode. */
 .hero {
-  position: relative;
-  overflow: hidden;
-  padding: 5.5rem 0 4rem;
-  color: var(--mlcil-hero-ink);
-  background: radial-gradient(
-      120% 120% at 15% 0%,
-      var(--mlcil-hero-to) 0%,
-      var(--mlcil-hero-from) 62%
-    ),
-    var(--mlcil-hero-from);
-  border-bottom: 1px solid var(--mlcil-border);
+    position: relative;
+    overflow: hidden;
+    padding: 5.5rem 0 4rem;
+    color: var(--mlcil-hero-ink);
+    background:
+        radial-gradient(120% 120% at 15% 0%, var(--mlcil-hero-to) 0%, var(--mlcil-hero-from) 62%),
+        var(--mlcil-hero-from);
+    border-bottom: 1px solid var(--mlcil-border);
 }
 
 .lattice {
-  position: absolute;
-  inset: -10% -5%;
-  width: 110%;
-  height: 130%;
-  color: var(--mlcil-hero-lattice);
-  pointer-events: none;
-  -webkit-mask-image: radial-gradient(
-    75% 90% at 78% 12%,
-    #000 0%,
-    transparent 72%
-  );
-  mask-image: radial-gradient(75% 90% at 78% 12%, #000 0%, transparent 72%);
+    position: absolute;
+    inset: -10% -5%;
+    width: 110%;
+    height: 130%;
+    color: var(--mlcil-hero-lattice);
+    pointer-events: none;
+    -webkit-mask-image: radial-gradient(75% 90% at 78% 12%, #000 0%, transparent 72%);
+    mask-image: radial-gradient(75% 90% at 78% 12%, #000 0%, transparent 72%);
 }
 
 .inner {
-  position: relative;
+    position: relative;
 }
 
 /* Sets the lab in its institution, so it should be legible at a glance rather
    than reading as fine print: larger and heavier than a typical eyebrow, with
    the tracking pulled back in to compensate for the extra size. */
 .affiliation {
-  margin: 0 0 1rem;
-  font-size: 0.95rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--mlcil-hero-eyebrow);
+    margin: 0 0 1rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--mlcil-hero-eyebrow);
 }
 
 .title {
-  max-width: 26ch;
-  margin: 0 0 1.1rem;
-  font-size: clamp(2.1rem, 1.2rem + 3vw, 3.2rem);
-  font-weight: 700;
-  line-height: 1.12;
-  letter-spacing: -0.02em;
-  color: var(--mlcil-hero-ink);
+    max-width: 26ch;
+    margin: 0 0 1.1rem;
+    font-size: clamp(2.1rem, 1.2rem + 3vw, 3.2rem);
+    font-weight: 700;
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    color: var(--mlcil-hero-ink);
 }
 
 .tagline {
-  max-width: 56ch;
-  margin: 0 0 2rem;
-  font-size: clamp(1.02rem, 0.95rem + 0.4vw, 1.2rem);
-  color: var(--mlcil-hero-ink-muted);
+    max-width: 56ch;
+    margin: 0 0 2rem;
+    font-size: clamp(1.02rem, 0.95rem + 0.4vw, 1.2rem);
+    color: var(--mlcil-hero-ink-muted);
 }
 
 .actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.1rem;
 }
 
 .primaryButton,
 .softButton {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.6rem 1.35rem;
-  font-size: 0.95rem;
-  font-weight: 600;
-  border-radius: 6px;
-  border: 1px solid transparent;
-  transition: background-color 150ms ease, border-color 150ms ease,
-    color 150ms ease;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.6rem 1.35rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    transition:
+        background-color 150ms ease,
+        border-color 150ms ease,
+        color 150ms ease;
 }
 
 .primaryButton {
-  color: var(--mlcil-hero-button-ink);
-  background: var(--mlcil-hero-button-bg);
+    color: var(--mlcil-hero-button-ink);
+    background: var(--mlcil-hero-button-bg);
 }
 
 .primaryButton:hover {
-  color: var(--mlcil-hero-button-ink);
-  background: var(--mlcil-hero-button-bg-hover);
-  text-decoration: none;
+    color: var(--mlcil-hero-button-ink);
+    background: var(--mlcil-hero-button-bg-hover);
+    text-decoration: none;
 }
 
 /* Tinted rather than outlined, so every button in the row carries some color. */
 .softButton {
-  color: var(--mlcil-hero-soft-ink);
-  background: var(--mlcil-hero-soft-bg);
-  border-color: var(--mlcil-hero-soft-border);
+    color: var(--mlcil-hero-soft-ink);
+    background: var(--mlcil-hero-soft-bg);
+    border-color: var(--mlcil-hero-soft-border);
 }
 
 .softButton:hover {
-  color: var(--mlcil-hero-soft-ink);
-  background: var(--mlcil-hero-soft-bg-hover);
-  text-decoration: none;
+    color: var(--mlcil-hero-soft-ink);
+    background: var(--mlcil-hero-soft-bg-hover);
+    text-decoration: none;
 }
 
 @media (max-width: 768px) {
-  .hero {
-    padding: 3.5rem 0 3rem;
-  }
+    .hero {
+        padding: 3.5rem 0 3rem;
+    }
 }

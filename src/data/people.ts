@@ -8,42 +8,53 @@
  */
 
 export type PersonLink = {
-  label: 'Scholar' | 'GitHub' | 'LinkedIn' | 'Website' | 'ORCID' | 'Email';
-  href: string;
+    label: 'Google Scholar' | 'GitHub' | 'LinkedIn' | 'Website' | 'ORCID' | 'Email';
+    href: string;
 };
 
 export type Person = {
-  name: string;
-  role: string;
-  /** Short bio, 1-3 sentences. */
-  bio?: string;
-  photo?: string;
-  links?: PersonLink[];
+    name: string;
+    role: string;
+    /** Short bio, 1-3 sentences. */
+    bio?: string;
+    photo?: string;
+    links?: PersonLink[];
 };
 
 export type PeopleGroup = {
-  id: string;
-  title: string;
-  description?: string;
-  members: Person[];
+    id: string;
+    title: string;
+    description?: string;
+    members: Person[];
 };
 
 export const LAB_LEAD: Person = {
-  name: 'Jakub Adamczyk',
-  role: 'Lab lead · Researcher, Faculty of Computer Science, AGH',
-  photo: 'img/people/Jakub_Adamczyk.jpg',
-  bio: 'Leader and founder of MLCIL. His scientific interests include chemoinformatics, QSAR/QSPR, graph machine learning, and applications of ML in chemoinformatics and other fields.',
-  links: [
-    {
-      label: 'Scholar',
-      href: 'https://scholar.google.com/citations?user=7R6gRjMAAAAJ&hl=en',
-    },
-    { label: 'GitHub', href: 'https://github.com/j-adamczyk' },
-    {
-      label: 'LinkedIn',
-      href: 'https://www.linkedin.com/in/jakub-adamczyk-816566182/',
-    },
-  ],
+    name: 'Jakub Adamczyk',
+    role: 'Lab lead · Researcher, Faculty of Computer Science, AGH',
+    photo: 'img/people/Jakub_Adamczyk.jpg',
+    bio:
+        'Leader and founder of MLCIL. ' +
+        'My scientific interests include chemoinformatics, QSAR/QSPR, graph machine learning, ' +
+        'and applications of ML in chemoinformatics and other fields. ' +
+        'Working as a Senior Chemoinformatician at MatGen.',
+    links: [
+        {
+            label: 'Google Scholar',
+            href: 'https://scholar.google.com/citations?user=7R6gRjMAAAAJ&hl=en',
+        },
+        {
+            label: 'ORCID',
+            href: 'https://orcid.org/0000-0003-4336-4288',
+        },
+        {
+            label: 'LinkedIn',
+            href: 'https://www.linkedin.com/in/jakub-adamczyk-816566182/',
+        },
+        {
+            label: 'GitHub',
+            href: 'https://github.com/j-adamczyk',
+        },
+    ],
 };
 
 /**
@@ -51,67 +62,153 @@ export const LAB_LEAD: Person = {
  * safe to leave a section in place until you have someone to put in it.
  */
 export const PEOPLE_GROUPS: PeopleGroup[] = [
-  {
-    id: 'phd',
-    title: 'PhD students',
-    members: [
-      {
-        name: 'Piotr Ludynia',
-        role: 'Researcher, Faculty of Computer Science, AGH',
-        photo: 'img/people/Piotr_Ludynia.png',
-        bio: 'One of the original creators of scikit-fingerprints. Mainly interested in ML algorithm opitmizations, especially in chemoinformatics.',
-        links: [
-          {
-            label: 'Scholar',
-            href: 'https://scholar.google.com/citations?user=By_zWVoAAAAJ&hl=en',
-          },
-          { 
-            label: 'GitHub', 
-            href: 'https://github.com/my-alaska' 
-          },
-          {
-            label: 'LinkedIn',
-            href: 'https://www.linkedin.com/in/piotr-ludynia/',
-          },
+    {
+        id: 'researcher',
+        title: 'Researchers',
+        members: [
+            {
+                name: 'Wojciech Czech',
+                role: 'Researcher, PhD',
+                bio:
+                    'Researcher working on graph machine learning, structural pattern recognition, ' +
+                    'and complex networks.  My work spans graph topological descriptors, ' +
+                    'molecular graph classification, and exploration of large networks. ' +
+                    'Working as the CTO of Placewise.',
+                links: [
+                    {
+                        label: 'Google Scholar',
+                        href: 'https://scholar.google.com/citations?user=g3thwW4AAAAJ&hl=pl&oi=ao',
+                    },
+                    {
+                        label: 'ORCID',
+                        href: 'https://orcid.org/0000-0002-1903-8098',
+                    },
+                    {
+                        label: 'LinkedIn',
+                        href: 'https://www.linkedin.com/in/wojciech-czech-48baaa4/',
+                    },
+                ],
+            },
         ],
-      }
-    ],
-  },
-  {
-    id: 'students',
-    title: 'MSc & BSc students',
-    description:
-      'Students writing theses or working on research projects with us.',
-    members: [
-      {
-        name: 'Franciszek Job',
-        role: 'MSc student, Faculty of Computer Science, AGH',
-        photo: 'img/people/Franciszek_Job.jpg',
-        bio: 'His work focuses on high-performance data pipelines and curated datasets for chemoinformatics (co-author of MolPILE).',
-        links: [
-          { 
-            label: 'GitHub', 
-            href: 'https://github.com/franciszekjob' 
-          },
-          {
-            label: 'LinkedIn',
-            href: 'https://www.linkedin.com/in/fjob/',
-          },
+    },
+    {
+        id: 'phd_students',
+        title: 'PhD students',
+        members: [
+            {
+                name: 'Mateusz Praski',
+                role: 'PhD student',
+                bio:
+                    'Researching molecular representation learning and foundation models for ' +
+                    'chemistry. My work focuses on benchmarking models and Bayesian statistical ' +
+                    'analysis for fair evaluation. Working as a Senior ML Specialist at Selvita.',
+                links: [
+                    {
+                        label: 'Google Scholar',
+                        href: 'https://scholar.google.com/citations?user=g2evp5gAAAAJ&hl=pl&oi=ao',
+                    },
+                    {
+                        label: 'ORCID',
+                        href: 'https://orcid.org/0009-0006-3956-5377',
+                    },
+                    {
+                        label: 'LinkedIn',
+                        href: 'https://www.linkedin.com/in/mateusz-praski/',
+                    },
+                    {
+                        label: 'GitHub',
+                        href: 'https://github.com/Thematiq',
+                    },
+                ],
+            },
+            {
+                name: 'Piotr Ludynia',
+                role: 'PhD student',
+                photo: 'img/people/Piotr_Ludynia.png',
+                bio:
+                    'Researching optimizations of ML algorithms, particularly in chemoinformatics. ' +
+                    'I am one of the primary developers of scikit-fingerprints. Working as a ' +
+                    'Machine Learning Engineer at Enelpol.',
+                links: [
+                    {
+                        label: 'Google Scholar',
+                        href: 'https://scholar.google.com/citations?user=By_zWVoAAAAJ&hl=en',
+                    },
+                    {
+                        label: 'ORCID',
+                        href: 'https://orcid.org/0009-0004-0749-9569',
+                    },
+                    {
+                        label: 'LinkedIn',
+                        href: 'https://www.linkedin.com/in/piotr-ludynia/',
+                    },
+                    {
+                        label: 'GitHub',
+                        href: 'https://github.com/my-alaska',
+                    },
+                ],
+            },
+            {
+                name: 'Adam Staniszewski',
+                role: 'PhD student',
+                photo: 'img/people/Adam_Staniszewski.jpg',
+                bio:
+                    'Researching molecular representations and non-typical QSAR/QSPR targets ' +
+                    'like massively multilabel classification and biologic macromolecules. ' +
+                    'Working as a ML Engineer and Chemoinformatician at MatGen.',
+                links: [
+                    {
+                        label: 'LinkedIn',
+                        href: 'https://www.linkedin.com/in/adam-staniszewski-4b0154288/',
+                    },
+                    {
+                        label: 'GitHub',
+                        href: 'https://github.com/StaniszewskiA',
+                    },
+                ],
+            },
         ],
-      }
-    ],
-  },
-  {
-    id: 'collaborators',
-    title: 'Collaborators',
-    description:
-      'People we work with regularly at other institutions.',
-    members: [],
-  },
-  {
-    id: 'alumni',
-    title: 'Alumni',
-    description: 'Former members and where they went next.',
-    members: [],
-  },
+    },
+    {
+        id: 'students',
+        title: 'MSc & BSc students',
+        description: 'Students working on research projects with us.',
+        members: [
+            {
+                name: 'Franciszek Job',
+                role: 'MSc student',
+                photo: 'img/people/Franciszek_Job.jpg',
+                bio:
+                    'My work focuses on high-performance data pipelines and large-scale ' +
+                    'data processing for chemoinformatics. Working as a Software Engineer at ' +
+                    'Software Mansion, and as a freelance full-stack developer at Venti Labs.',
+                links: [
+                    {
+                        label: 'ORCID',
+                        href: 'https://orcid.org/0009-0007-4833-8982',
+                    },
+                    {
+                        label: 'LinkedIn',
+                        href: 'https://www.linkedin.com/in/fjob/',
+                    },
+                    {
+                        label: 'GitHub',
+                        href: 'https://github.com/franciszekjob',
+                    },
+                ],
+            },
+        ],
+    },
+    {
+        id: 'collaborators',
+        title: 'Collaborators',
+        description: 'People we work with regularly at other institutions.',
+        members: [],
+    },
+    {
+        id: 'alumni',
+        title: 'Alumni',
+        description: 'Former members and where they went next.',
+        members: [],
+    },
 ];

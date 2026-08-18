@@ -16,12 +16,13 @@ export default function PeoplePage(): ReactNode {
     return (
         <Layout
             title="People"
-            description={`Members of the Machine Learning and Chemoinformatics Lab at ${LAB.institution}.`}>
-            <PageHeader title="Our team"/>
+            description={`Members of the Machine Learning and Chemoinformatics Lab at ${LAB.institution}.`}
+        >
+            <PageHeader title="Our team" />
 
             <main className="mlcil-section">
                 <div className="mlcil-container">
-                    <PersonFeature person={LAB_LEAD}/>
+                    <PersonFeature person={LAB_LEAD} />
 
                     {groups.map((group) => (
                         <section key={group.id} className={styles.group}>
@@ -33,7 +34,7 @@ export default function PeoplePage(): ReactNode {
                             )}
                             <div className={styles.grid}>
                                 {group.members.map((person) => (
-                                    <PersonCard key={person.name} person={person}/>
+                                    <PersonCard key={person.name} person={person} />
                                 ))}
                             </div>
                         </section>
@@ -46,8 +47,8 @@ export default function PeoplePage(): ReactNode {
                         <p>
                             We are open to collaborations with researchers, students and companies
                             working on similar research areas. Contributions to our open source
-                            projects are welcome from anyone. See the <Link to="/contact">contact page</Link>{' '}
-                            for how to reach us.
+                            projects are welcome from anyone. See the{' '}
+                            <Link to="/contact">contact page</Link> for how to reach us.
                         </p>
                     </section>
                 </div>

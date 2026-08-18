@@ -1,49 +1,49 @@
 .group {
-  margin-bottom: 3.5rem;
+    margin-bottom: 3.5rem;
 }
 
 .group:last-child {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 .groupTitle {
-  margin: 0;
-  padding-bottom: 0.6rem;
-  font-size: 1.4rem;
-  border-bottom: 1px solid var(--mlcil-border);
+    margin: 0;
+    padding-bottom: 0.6rem;
+    font-size: 1.4rem;
+    border-bottom: 1px solid var(--mlcil-border);
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 1.25rem;
-  margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.25rem;
+    margin-top: 1.5rem;
 }
 
 .name {
-  margin: 0 0 0.75rem;
-  font-size: 1.15rem;
-  font-weight: 600;
+    margin: 0 0 0.75rem;
+    font-size: 1.15rem;
+    font-weight: 600;
 }
 
 .summary {
-  margin: 0 0 0.6rem;
-  font-weight: 500;
+    margin: 0 0 0.6rem;
+    font-weight: 500;
 }
 
 .description {
-  margin: 0 0 1rem;
-  font-size: 0.94rem;
-  color: var(--mlcil-ink-muted);
+    margin: 0 0 1rem;
+    font-size: 0.94rem;
+    color: var(--mlcil-ink-muted);
 }
 
 .links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.1rem;
-  margin-top: auto;
-  padding-top: 0.9rem;
-  border-top: 1px solid var(--mlcil-border);
-  font-size: 0.87rem;
-  font-weight: 600;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.1rem;
+    margin-top: auto;
+    padding-top: 0.9rem;
+    border-top: 1px solid var(--mlcil-border);
+    font-size: 0.87rem;
+    font-weight: 600;
 }

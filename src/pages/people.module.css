@@ -1,41 +1,55 @@
 .group {
-  margin-top: 3.5rem;
+    margin-top: 3.5rem;
 }
 
 .groupTitle {
-  margin: 0 0 0.4rem;
-  padding-bottom: 0.6rem;
-  font-size: 1.4rem;
-  border-bottom: 1px solid var(--mlcil-border);
+    margin: 0 0 0.4rem;
+    padding-bottom: 0.6rem;
+    font-size: 1.4rem;
+    border-bottom: 1px solid var(--mlcil-border);
 }
 
 .groupDescription {
-  margin: 0.75rem 0 0;
-  color: var(--mlcil-ink-muted);
+    margin: 0.75rem 0 0;
+    color: var(--mlcil-ink-muted);
 }
 
+/* Small vertical boxes: portrait on top, details below. */
 .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 1.25rem;
-  margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+    margin-top: 1.5rem;
 }
 
 .join {
-  margin-top: 3.5rem;
-  padding: 2rem;
-  background: var(--mlcil-surface-sunken);
-  border: 1px solid var(--mlcil-border);
-  border-left: 3px solid var(--mlcil-accent);
-  border-radius: var(--mlcil-radius);
+    margin-top: 3.5rem;
+    padding: 2rem;
+    background: var(--mlcil-surface-sunken);
+    border: 1px solid var(--mlcil-border);
+    border-left: 3px solid var(--mlcil-accent);
+    border-radius: var(--mlcil-radius);
 }
 
 .joinTitle {
-  margin: 0 0 0.75rem;
-  font-size: 1.4rem;
+    margin: 0 0 0.75rem;
+    font-size: 1.4rem;
 }
 
 .join p {
-  margin: 0;
-  color: var(--mlcil-ink-muted);
+    margin: 0;
+    color: var(--mlcil-ink-muted);
+}
+
+/* Two columns on tablets, one on phones: four is too narrow to read there. */
+@media (max-width: 996px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
 }
