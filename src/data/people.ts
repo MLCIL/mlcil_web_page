@@ -51,6 +51,52 @@ export const LAB_LEAD: Person = {
  * safe to leave a section in place until you have someone to put in it.
  */
 export const PEOPLE_GROUPS: PeopleGroup[] = [
+  {
+    id: 'phd',
+    title: 'PhD students',
+    members: [
+      {
+        name: 'Piotr Ludynia',
+        role: 'Researcher, Faculty of Computer Science, AGH',
+        photo: 'img/people/Piotr_Ludynia.png',
+        bio: 'One of the original creators of scikit-fingerprints. Mainly interested in ML algorithm opitmizations, especially in chemoinformatics.',
+        links: [
+          {
+            label: 'Scholar',
+            href: 'https://scholar.google.com/citations?user=By_zWVoAAAAJ&hl=en',
+          },
+          {
+            label: 'GitHub',
+            href: 'https://github.com/my-alaska'
+          },
+          {
+            label: 'LinkedIn',
+            href: 'https://www.linkedin.com/in/piotr-ludynia/',
+          },
+        ],
+      }
+    ],
+  },
+  {
+    id: 'students',
+    title: 'MSc & BSc students',
+    description:
+      'Students writing theses or working on research projects with us.',
+    members: [],
+  },
+  {
+    id: 'collaborators',
+    title: 'Collaborators',
+    description:
+      'People we work with regularly at other institutions.',
+    members: [],
+  },
+  {
+    id: 'alumni',
+    title: 'Alumni',
+    description: 'Former members and where they went next.',
+    members: [],
+  },
     {
         id: 'researcher',
         title: 'Researchers',
