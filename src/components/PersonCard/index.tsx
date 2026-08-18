@@ -78,14 +78,12 @@ export default function PersonCard({person}: {person: Person}): ReactNode {
     return (
         <div className={clsx('mlcil-card', 'mlcil-card--interactive', styles.card)}>
             <Portrait person={person} size="sm" />
-            <div className={styles.cardBody}>
-                <Heading as="h3" className={styles.name}>
-                    {person.name}
-                </Heading>
-                <p className={styles.role}>{person.role}</p>
-                {person.bio && <p className={styles.bio}>{person.bio}</p>}
-                <PersonLinks person={person} />
-            </div>
+            <Heading as="h3" className={styles.name}>
+                {person.name}
+            </Heading>
+            <p className={styles.role}>{person.role}</p>
+            {person.bio && <p className={styles.bio}>{person.bio}</p>}
+            <PersonLinks person={person} />
         </div>
     );
 }
