@@ -197,13 +197,55 @@ export const PEOPLE_GROUPS: PeopleGroup[] = [
                     },
                 ],
             },
+            {
+                name: 'Hubert Miklas',
+                role: 'BSc student',
+                bio:
+                    'My work focuses on maximum diversity picking and developing efficient ' +
+                    'scientific software. Working as a Software Development Engineer at Remitly.',
+                links: [
+                    {
+                        label: 'LinkedIn',
+                        href: 'https://www.linkedin.com/in/hubert-miklas-773968278/',
+                    },
+                    {
+                        label: 'GitHub',
+                        href: 'https://github.com/Hbrtjm',
+                    },
+                ],
+            },
         ],
     },
     {
         id: 'collaborators',
         title: 'Collaborators',
         description: 'People we work with regularly at other institutions.',
-        members: [],
+        members: [
+            {
+                name: 'Jakub Poziemski',
+                role:
+                    'PhD student, Institute of Biochemistry and Biophysics ' +
+                    'of the Polish Academy of Sciences (IBB PAS)',
+                bio:
+                    'My work focuses on protein-ligand affinity prediction and incorporating ' +
+                    'molecular dynamics information into those problems. I also work on applying ' +
+                    'QSAR/QSPR in ecotoxicology and agrochemistry. Working as a ',
+                links: [
+                    {
+                        label: 'ORCID',
+                        href: 'https://orcid.org/0000-0002-1033-8529',
+                    },
+                    {
+                        label: 'LinkedIn',
+                        href: 'https://www.linkedin.com/in/jakub-poziemski-885868164/',
+                    },
+                    {
+                        label: 'GitHub',
+                        href: 'https://github.com/JPoziemski',
+                    },
+                ],
+            },
+        ],
     },
     {
         id: 'alumni',
