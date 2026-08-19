@@ -84,7 +84,6 @@
     --ifm-heading-color: var(--mlcil-ink);
     --ifm-link-hover-color: var(--ifm-color-primary-darker);
     --ifm-navbar-shadow: 0 1px 0 var(--mlcil-border);
-    --ifm-footer-background-color: var(--mlcil-surface-sunken);
     --ifm-hr-background-color: var(--mlcil-border);
     --ifm-toc-border-color: var(--mlcil-border);
     --ifm-table-border-color: var(--mlcil-border);
@@ -149,7 +148,6 @@ html[data-theme='dark'] {
     --ifm-heading-color: var(--mlcil-ink);
     --ifm-link-hover-color: var(--ifm-color-primary-lighter);
     --ifm-navbar-shadow: 0 1px 0 var(--mlcil-border);
-    --ifm-footer-background-color: var(--mlcil-surface-sunken);
     --ifm-hr-background-color: var(--mlcil-border);
     --ifm-toc-border-color: var(--mlcil-border);
     --ifm-table-border-color: var(--mlcil-border);
@@ -365,17 +363,16 @@ a.mlcil-card:hover,
 
 .footer {
     border-top: 1px solid var(--mlcil-border);
+    /* Infima defaults to 2rem; the footer only holds the copyright line. */
+    --ifm-footer-padding-vertical: 0.85rem;
 }
 
 /* The footer is configured as `style: 'light'`, so Infima hardcodes near-black
-   text on it. Remap every footer variable to the brand tokens so the same
+   text on it. Remap the footer variables to the brand tokens so the same
    footer reads correctly in both themes. */
 .footer--light {
     --ifm-footer-background-color: var(--mlcil-surface-sunken);
     --ifm-footer-color: var(--mlcil-ink-muted);
-    --ifm-footer-link-color: var(--mlcil-ink-muted);
-    --ifm-footer-link-hover-color: var(--ifm-color-primary);
-    --ifm-footer-title-color: var(--mlcil-ink);
 }
 
 .footer__copyright {
