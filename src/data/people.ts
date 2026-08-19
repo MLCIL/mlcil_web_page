@@ -69,6 +69,7 @@ export const PEOPLE_GROUPS: PeopleGroup[] = [
             {
                 name: 'Wojciech Czech',
                 role: 'Researcher, PhD',
+                photo: 'img/people/Wojciech_Czech.png',
                 bio:
                     'Researcher working on graph machine learning, structural pattern recognition, ' +
                     'and complex networks.  My work spans graph topological descriptors, ' +
