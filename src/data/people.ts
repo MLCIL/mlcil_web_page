@@ -255,6 +255,23 @@ export const PEOPLE_GROUPS: PeopleGroup[] = [
                 ],
             },
             {
+                name: 'Przemysław Popowski',
+                role: 'MSc student',
+                bio:
+                    'My research focuses on robust global recommendation systems based on ' +
+                    'Bayesian statistics. Working as a Junior Software Engineer at AVSystem.',
+                links: [
+                    {
+                        label: 'LinkedIn',
+                        href: 'https://www.linkedin.com/in/popowski-przemyslaw/',
+                    },
+                    {
+                        label: 'GitHub',
+                        href: 'https://github.com/przemuuu',
+                    },
+                ],
+            },
+            {
                 name: 'Michał Szymocha',
                 role: 'BSc student',
                 bio:
@@ -339,6 +356,34 @@ export const PEOPLE_GROUPS: PeopleGroup[] = [
         title: 'Collaborators',
         description: 'People we work with regularly at other institutions.',
         members: [
+            {
+                name: 'Paweł Siedlecki',
+                role:
+                    'Assistant Professor, PhD, Institute of Biochemistry and Biophysics ' +
+                    'of the Polish Academy of Sciences (IBB PAS)',
+                bio:
+                    'Leader of CHEMM group at IBB PAS. My work focuses on protein-ligand ' +
+                    'affinity prediction and in silico molecular screening. I also work on ' +
+                    'applying QSAR/QSPR in ecotoxicology and agrochemistry.',
+                links: [
+                    {
+                        label: 'ORCID',
+                        href: 'https://orcid.org/0000-0002-7482-1341',
+                    },
+                    {
+                        label: 'LinkedIn',
+                        href: 'https://scholar.google.com/citations?user=4MGHwSYAAAAJ&hl=pl&oi=ao',
+                    },
+                    {
+                        label: 'GitHub',
+                        href: 'https://github.com/henryk69',
+                    },
+                    {
+                        label: 'Website',
+                        href: 'https://ibb.edu.pl/en/laboratory/pawel-siedlecki-phd-dsc/',
+                    },
+                ],
+            },
             {
                 name: 'Jakub Poziemski',
                 role:
