@@ -181,6 +181,10 @@ export const PEOPLE_GROUPS: PeopleGroup[] = [
                     'Working as a Software Engineer at IBM.',
                 links: [
                     {
+                        label: 'Google Scholar',
+                        href: 'https://scholar.google.com/citations?user=Ab146dwAAAAJ&hl=pl&oi=ao',
+                    },
+                    {
                         label: 'ORCID',
                         href: 'https://orcid.org/0009-0004-1889-5655',
                     },
