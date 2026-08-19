@@ -181,6 +181,10 @@ export const PEOPLE_GROUPS: PeopleGroup[] = [
                     'Working as a Software Engineer at IBM.',
                 links: [
                     {
+                        label: 'Google Scholar',
+                        href: 'https://scholar.google.com/citations?user=Ab146dwAAAAJ&hl=pl&oi=ao',
+                    },
+                    {
                         label: 'ORCID',
                         href: 'https://orcid.org/0009-0004-1889-5655',
                     },
@@ -346,6 +350,59 @@ export const PEOPLE_GROUPS: PeopleGroup[] = [
                     {
                         label: 'GitHub',
                         href: 'https://github.com/Hbrtjm',
+                    },
+                ],
+            },
+            {
+                name: 'Aleksander Jóźwik',
+                role: 'BSc student',
+                bio:
+                    'I am developing scikit-fingerprints and other efficient chemoinformatics ' +
+                    'software. Working as a Software Developer at Appliscale.',
+                links: [
+                    {
+                        label: 'LinkedIn',
+                        href: 'https://www.linkedin.com/in/aleksander-j%C3%B3%C5%BAwik/',
+                    },
+                    {
+                        label: 'GitHub',
+                        href: 'https://github.com/OlaszPL',
+                    },
+                ],
+            },
+            {
+                name: 'Dariusz Marecik',
+                role: 'BSc student',
+                bio:
+                    'I am developing scikit-fingerprints and other efficient chemoinformatics ' +
+                    'software. Working as a Software Developer at Appliscale.',
+                links: [
+                    {
+                        label: 'LinkedIn',
+                        href: 'https://www.linkedin.com/in/dariusz-marecik/',
+                    },
+                    {
+                        label: 'GitHub',
+                        href: 'https://github.com/FloudMe77',
+                    },
+                ],
+            },
+            {
+                name: 'Piotr Kacprzak',
+                role: 'BSc student',
+                bio:
+                    'I am developing scikit-fingerprints and other efficient chemoinformatics ' +
+                    'software, and also researching transformers for time series forecasting. ' +
+                    'Working as a Research Scholar at the Carnegie Mellon University ' +
+                    'Robotics Institute.',
+                links: [
+                    {
+                        label: 'LinkedIn',
+                        href: 'https://www.linkedin.com/in/pkacprzak5/',
+                    },
+                    {
+                        label: 'GitHub',
+                        href: 'https://github.com/pkacprzak5',
                     },
                 ],
             },

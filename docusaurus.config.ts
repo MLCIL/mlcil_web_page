@@ -124,30 +124,6 @@ const config: Config = {
         },
         footer: {
             style: 'light',
-            links: [
-                {
-                    title: 'Lab',
-                    items: [
-                        {label: 'Research', to: '/research'},
-                        {label: 'Publications', to: '/publications'},
-                        {label: 'People', to: '/people'},
-                        {label: 'Grants', to: '/grants'},
-                        {label: 'Blog', to: '/blog'},
-                        {label: 'Contact', to: '/contact'},
-                    ],
-                },
-                {
-                    title: 'Open source',
-                    items: [
-                        {label: 'Software and datasets', to: '/software'},
-                        {
-                            label: 'scikit-fingerprints',
-                            href: 'https://github.com/MLCIL/scikit-fingerprints',
-                        },
-                        {label: 'GitHub organization', href: 'https://github.com/MLCIL'},
-                    ],
-                },
-            ],
             copyright: `Machine Learning and Chemoinformatics Lab · Faculty of Computer Science, AGH University of Krakow · © ${new Date().getFullYear()}`,
         },
         prism: {
