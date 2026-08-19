@@ -69,6 +69,7 @@ export const PEOPLE_GROUPS: PeopleGroup[] = [
             {
                 name: 'Wojciech Czech',
                 role: 'Researcher, PhD',
+                photo: 'img/people/Wojciech_Czech.png',
                 bio:
                     'Researcher working on graph machine learning, structural pattern recognition, ' +
                     'and complex networks.  My work spans graph topological descriptors, ' +
@@ -158,6 +159,10 @@ export const PEOPLE_GROUPS: PeopleGroup[] = [
                     'Working as a ML Engineer and Chemoinformatician at MatGen.',
                 links: [
                     {
+                        label: 'ORCID',
+                        href: 'https://orcid.org/0009-0009-1326-173X',
+                    },
+                    {
                         label: 'LinkedIn',
                         href: 'https://www.linkedin.com/in/adam-staniszewski-4b0154288/',
                     },
@@ -167,12 +172,33 @@ export const PEOPLE_GROUPS: PeopleGroup[] = [
                     },
                 ],
             },
+            {
+                name: 'Jolanta Śliwa',
+                role: 'PhD student',
+                bio:
+                    'I am researching machine learning applications in tabletop pen & paper RPG ' +
+                    'game design, particularly predictive models for ordinal regression. ' +
+                    'Working as a Software Engineer at IBM.',
+                links: [
+                    {
+                        label: 'ORCID',
+                        href: 'https://orcid.org/0009-0004-1889-5655',
+                    },
+                    {
+                        label: 'LinkedIn',
+                        href: 'https://www.linkedin.com/in/jolanta-%C5%9Bliwa-658465240/',
+                    },
+                    {
+                        label: 'GitHub',
+                        href: 'https://github.com/tunczyk101',
+                    },
+                ],
+            },
         ],
     },
     {
         id: 'students',
-        title: 'MSc & BSc students',
-        description: 'Students working on research projects with us.',
+        title: 'Students',
         members: [
             {
                 name: 'Franciszek Job',
@@ -197,13 +223,192 @@ export const PEOPLE_GROUPS: PeopleGroup[] = [
                     },
                 ],
             },
+            {
+                name: 'Kacper Szot',
+                role: 'MSc student',
+                bio:
+                    'I work on structure-based and ligand-based virtual screening, particularly ' +
+                    'fair evaluation of algorithms for those problems. Working as a Software ' +
+                    'Engineer at Software Mansion.',
+                links: [
+                    {
+                        label: 'LinkedIn',
+                        href: 'https://www.linkedin.com/in/kacper-szot/',
+                    },
+                    {
+                        label: 'GitHub',
+                        href: 'https://github.com/kacperszo',
+                    },
+                ],
+            },
+            {
+                name: 'Maciej Nowakowski',
+                role: 'MSc student',
+                bio:
+                    'I work on fair evaluation ligand-based virtual screening and curating ' +
+                    'benchmarks for those problems.',
+                links: [
+                    {
+                        label: 'GitHub',
+                        href: 'https://github.com/MaciekBartoszNowakowski',
+                    },
+                ],
+            },
+            {
+                name: 'Przemysław Popowski',
+                role: 'MSc student',
+                bio:
+                    'My research focuses on robust global recommendation systems based on ' +
+                    'Bayesian statistics. Working as a Junior Software Engineer at AVSystem.',
+                links: [
+                    {
+                        label: 'LinkedIn',
+                        href: 'https://www.linkedin.com/in/popowski-przemyslaw/',
+                    },
+                    {
+                        label: 'GitHub',
+                        href: 'https://github.com/przemuuu',
+                    },
+                ],
+            },
+            {
+                name: 'Michał Szymocha',
+                role: 'BSc student',
+                bio:
+                    'My work focuses on maximum diversity picking and developing efficient ' +
+                    'scientific software. Working as a Research Intern at the Jagiellonian Center ' +
+                    'for Artificial Intelligence (JCAI).',
+                links: [
+                    {
+                        label: 'Google Scholar',
+                        href: 'https://scholar.google.com/citations?user=U6GXA4IAAAAJ&hl=pl&oi=ao',
+                    },
+                    {
+                        label: 'ORCID',
+                        href: 'https://orcid.org/0009-0009-6480-727X',
+                    },
+                    {
+                        label: 'LinkedIn',
+                        href: 'https://www.linkedin.com/in/micha%C5%82-szymocha/',
+                    },
+                    {
+                        label: 'GitHub',
+                        href: 'https://github.com/MichalTheProgrammer',
+                    },
+                ],
+            },
+            {
+                name: 'Maciej Kmąk',
+                role: 'BSc student',
+                bio:
+                    'My work focuses on maximum diversity picking and developing efficient ' +
+                    'scientific software. Working as a Software Engineer at Software Mansion.',
+                links: [
+                    {
+                        label: 'LinkedIn',
+                        href: 'https://www.linkedin.com/in/maciej-km%C4%85k/',
+                    },
+                    {
+                        label: 'GitHub',
+                        href: 'https://github.com/Ki3mONo',
+                    },
+                ],
+            },
+            {
+                name: 'Maciej Wiśniewski',
+                role: 'BSc student',
+                bio:
+                    'My work focuses on maximum diversity picking and developing efficient ' +
+                    'scientific software. Working as a Full Stack Software Engineer at Sabre.',
+                links: [
+                    {
+                        label: 'LinkedIn',
+                        href: 'https://www.linkedin.com/in/maciej-wi%C5%9Bniewski-674414358/',
+                    },
+                    {
+                        label: 'GitHub',
+                        href: 'https://github.com/macwsn',
+                    },
+                ],
+            },
+            {
+                name: 'Hubert Miklas',
+                role: 'BSc student',
+                photo: 'img/people/Hubert_Miklas.png',
+                bio:
+                    'My work focuses on maximum diversity picking and developing efficient ' +
+                    'scientific software. Working as a Software Development Engineer at Remitly.',
+                links: [
+                    {
+                        label: 'LinkedIn',
+                        href: 'https://www.linkedin.com/in/hubert-miklas-773968278/',
+                    },
+                    {
+                        label: 'GitHub',
+                        href: 'https://github.com/Hbrtjm',
+                    },
+                ],
+            },
         ],
     },
     {
         id: 'collaborators',
         title: 'Collaborators',
         description: 'People we work with regularly at other institutions.',
-        members: [],
+        members: [
+            {
+                name: 'Paweł Siedlecki',
+                role:
+                    'Assistant Professor, PhD, Institute of Biochemistry and Biophysics ' +
+                    'of the Polish Academy of Sciences (IBB PAS)',
+                bio:
+                    'Leader of CHEMM group at IBB PAS. My work focuses on protein-ligand ' +
+                    'affinity prediction and in silico molecular screening. I also work on ' +
+                    'applying QSAR/QSPR in ecotoxicology and agrochemistry.',
+                links: [
+                    {
+                        label: 'ORCID',
+                        href: 'https://orcid.org/0000-0002-7482-1341',
+                    },
+                    {
+                        label: 'LinkedIn',
+                        href: 'https://scholar.google.com/citations?user=4MGHwSYAAAAJ&hl=pl&oi=ao',
+                    },
+                    {
+                        label: 'GitHub',
+                        href: 'https://github.com/henryk69',
+                    },
+                    {
+                        label: 'Website',
+                        href: 'https://ibb.edu.pl/en/laboratory/pawel-siedlecki-phd-dsc/',
+                    },
+                ],
+            },
+            {
+                name: 'Jakub Poziemski',
+                role:
+                    'PhD student, Institute of Biochemistry and Biophysics ' +
+                    'of the Polish Academy of Sciences (IBB PAS)',
+                bio:
+                    'My work focuses on protein-ligand affinity prediction and incorporating ' +
+                    'molecular dynamics information into those problems. I also work on applying ' +
+                    'QSAR/QSPR in ecotoxicology and agrochemistry. Working as a ',
+                links: [
+                    {
+                        label: 'ORCID',
+                        href: 'https://orcid.org/0000-0002-1033-8529',
+                    },
+                    {
+                        label: 'LinkedIn',
+                        href: 'https://www.linkedin.com/in/jakub-poziemski-885868164/',
+                    },
+                    {
+                        label: 'GitHub',
+                        href: 'https://github.com/JPoziemski',
+                    },
+                ],
+            },
+        ],
     },
     {
         id: 'alumni',
