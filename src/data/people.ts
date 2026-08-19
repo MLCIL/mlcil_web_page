@@ -159,12 +159,38 @@ export const PEOPLE_GROUPS: PeopleGroup[] = [
                     'Working as a ML Engineer and Chemoinformatician at MatGen.',
                 links: [
                     {
+                        label: 'ORCID',
+                        href: 'https://orcid.org/0009-0009-1326-173X',
+                    },
+                    {
                         label: 'LinkedIn',
                         href: 'https://www.linkedin.com/in/adam-staniszewski-4b0154288/',
                     },
                     {
                         label: 'GitHub',
                         href: 'https://github.com/StaniszewskiA',
+                    },
+                ],
+            },
+            {
+                name: 'Jolanta Śliwa',
+                role: 'PhD student',
+                bio:
+                    'I am researching machine learning applications in tabletop pen & paper RPG ' +
+                    'game design, particularly predictive models for ordinal regression. ' +
+                    'Working as a Software Engineer at IBM.',
+                links: [
+                    {
+                        label: 'ORCID',
+                        href: 'https://orcid.org/0009-0004-1889-5655',
+                    },
+                    {
+                        label: 'LinkedIn',
+                        href: 'https://www.linkedin.com/in/jolanta-%C5%9Bliwa-658465240/',
+                    },
+                    {
+                        label: 'GitHub',
+                        href: 'https://github.com/tunczyk101',
                     },
                 ],
             },
@@ -194,6 +220,97 @@ export const PEOPLE_GROUPS: PeopleGroup[] = [
                     {
                         label: 'GitHub',
                         href: 'https://github.com/franciszekjob',
+                    },
+                ],
+            },
+            {
+                name: 'Kacper Szot',
+                role: 'MSc student',
+                bio:
+                    'I work on structure-based and ligand-based virtual screening, particularly ' +
+                    'fair evaluation of algorithms for those problems. Working as a Software ' +
+                    'Engineer at Software Mansion.',
+                links: [
+                    {
+                        label: 'LinkedIn',
+                        href: 'https://www.linkedin.com/in/kacper-szot/',
+                    },
+                    {
+                        label: 'GitHub',
+                        href: 'https://github.com/kacperszo',
+                    },
+                ],
+            },
+            {
+                name: 'Maciej Nowakowski',
+                role: 'MSc student',
+                bio:
+                    'I work on fair evaluation ligand-based virtual screening and curating ' +
+                    'benchmarks for those problems.',
+                links: [
+                    {
+                        label: 'GitHub',
+                        href: 'https://github.com/MaciekBartoszNowakowski',
+                    },
+                ],
+            },
+            {
+                name: 'Michał Szymocha',
+                role: 'BSc student',
+                bio:
+                    'My work focuses on maximum diversity picking and developing efficient ' +
+                    'scientific software. Working as a Research Intern at the Jagiellonian Center ' +
+                    'for Artificial Intelligence (JCAI).',
+                links: [
+                    {
+                        label: 'Google Scholar',
+                        href: 'https://scholar.google.com/citations?user=U6GXA4IAAAAJ&hl=pl&oi=ao',
+                    },
+                    {
+                        label: 'ORCID',
+                        href: 'https://orcid.org/0009-0009-6480-727X',
+                    },
+                    {
+                        label: 'LinkedIn',
+                        href: 'https://www.linkedin.com/in/micha%C5%82-szymocha/',
+                    },
+                    {
+                        label: 'GitHub',
+                        href: 'https://github.com/MichalTheProgrammer',
+                    },
+                ],
+            },
+            {
+                name: 'Maciej Kmąk',
+                role: 'BSc student',
+                bio:
+                    'My work focuses on maximum diversity picking and developing efficient ' +
+                    'scientific software. Working as a Software Engineer at Software Mansion.',
+                links: [
+                    {
+                        label: 'LinkedIn',
+                        href: 'https://www.linkedin.com/in/maciej-km%C4%85k/',
+                    },
+                    {
+                        label: 'GitHub',
+                        href: 'https://github.com/Ki3mONo',
+                    },
+                ],
+            },
+            {
+                name: 'Maciej Wiśniewski',
+                role: 'BSc student',
+                bio:
+                    'My work focuses on maximum diversity picking and developing efficient ' +
+                    'scientific software. Working as a Full Stack Software Engineer at Sabre.',
+                links: [
+                    {
+                        label: 'LinkedIn',
+                        href: 'https://www.linkedin.com/in/maciej-wi%C5%9Bniewski-674414358/',
+                    },
+                    {
+                        label: 'GitHub',
+                        href: 'https://github.com/macwsn',
                     },
                 ],
             },
