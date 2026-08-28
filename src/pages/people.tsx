@@ -5,7 +5,6 @@ import Heading from '@theme/Heading';
 
 import PageHeader from '@site/src/components/PageHeader';
 import PersonCard, {PersonFeature} from '@site/src/components/PersonCard';
-import StructuredData from '@site/src/components/StructuredData';
 import {LAB} from '@site/src/data/lab';
 import {LAB_LEAD, PEOPLE_GROUPS} from '@site/src/data/people';
 
@@ -19,7 +18,6 @@ export default function PeoplePage(): ReactNode {
             title="People"
             description={`Members of the Machine Learning and Chemoinformatics Lab at ${LAB.institution}.`}
         >
-            <StructuredData />
             <PageHeader title="Our team" />
 
             <main className="mlcil-section">

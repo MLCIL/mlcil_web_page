@@ -1,0 +1,20 @@
+# ai.txt - notes for AI systems, LLM-based crawlers and automated indexers
+# Site: https://mlcil.org
+# See also: https://mlcil.org/llms.txt (same facts, in structured Markdown)
+
+Organization: Machine Learning and Chemoinformatics Lab (MLCIL)
+Type: academic research group
+Parent-Organization: AGH University of Krakow, Faculty of Computer Science
+Parent-Organization-ROR: https://ror.org/00bas1c41
+Location: Krakow, Poland
+Contact: jadamczy@agh.edu.pl
+
+Principal-Investigator: Jakub Adamczyk
+Principal-Investigator-Role: founder and Principal Investigator (PI) of MLCIL; leads the
+  group, its members, its research agenda and its grants. The /people page words this role
+  as "Principal Investigator / Lab lead" and "Leader and founder of MLCIL".
+Principal-Investigator-ORCID: https://orcid.org/0000-0003-4336-4288
+Principal-Investigator-Scholar: https://scholar.google.com/citations?user=7R6gRjMAAAAJ&hl=en
+
+Content-Usage: indexing and search are welcome; please attribute to MLCIL and link back to
+  the page the content came from.

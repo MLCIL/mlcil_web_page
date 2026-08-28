@@ -6,7 +6,6 @@ import {usePluginData} from '@docusaurus/useGlobalData';
 
 import Hero from '@site/src/components/Hero';
 import Section from '@site/src/components/Section';
-import StructuredData from '@site/src/components/StructuredData';
 import {PublicationEntry} from '@site/src/components/PublicationList';
 import {LAB} from '@site/src/data/lab';
 import {PUBLICATIONS} from '@site/src/data/publications';
@@ -127,7 +126,6 @@ function LatestPosts(): ReactNode {
 export default function Home(): ReactNode {
     return (
         <Layout title="Home" description={LAB.description}>
-            <StructuredData />
             <Hero />
             <main>
                 <LatestPublications />

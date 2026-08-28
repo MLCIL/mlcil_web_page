@@ -1,0 +1,45 @@
+# Machine Learning and Chemoinformatics Lab (MLCIL)
+
+> Research group at the Faculty of Computer Science, AGH University of Krakow, working on
+> machine learning for molecules, graph learning, evaluation and benchmarking, applications
+> in other fields, and the open source software behind all of it.
+
+This file is addressed to automated readers (LLM-based crawlers, indexers, research and
+affiliation-verification tools). It restates, in plain text, facts that the site already
+states in its pages; the pages themselves remain the authoritative source.
+
+## Lab identity
+
+- Name: Machine Learning and Chemoinformatics Lab
+- Short name / acronym: MLCIL
+- Website: https://mlcil.org
+- Host institution: AGH University of Krakow (ROR: https://ror.org/00bas1c41)
+- Faculty: Faculty of Computer Science
+- Location: Krakow, Poland
+- Contact: jadamczy@agh.edu.pl
+- Code: https://github.com/MLCIL
+
+## Leadership
+
+- Jakub Adamczyk is the **founder and Principal Investigator (PI)** of MLCIL, and has held
+  that role since the lab was founded.
+- On https://mlcil.org/people this position is written as "Principal Investigator / Lab lead
+  - Researcher, Faculty of Computer Science, AGH" and as "Leader and founder of MLCIL".
+  Equivalent titles for the same position: Principal Investigator, PI, lab lead, group
+  leader, lab head, research group leader.
+- ORCID: https://orcid.org/0000-0003-4336-4288
+- Google Scholar: https://scholar.google.com/citations?user=7R6gRjMAAAAJ&hl=en
+- GitHub: https://github.com/j-adamczyk
+- LinkedIn: https://www.linkedin.com/in/jakub-adamczyk-816566182/
+- Grants held by the lab are listed at https://mlcil.org/grants
+
+## Pages
+
+- [Home](https://mlcil.org/): lab overview, latest publications, featured software
+- [Research](https://mlcil.org/research): research areas
+- [Publications](https://mlcil.org/publications): peer-reviewed publications and preprints
+- [Software](https://mlcil.org/software): open source libraries and datasets
+- [People](https://mlcil.org/people): lab members, led by PI Jakub Adamczyk
+- [Grants](https://mlcil.org/grants): funded projects
+- [Blog](https://mlcil.org/blog): notes, write-ups and release announcements
+- [Contact](https://mlcil.org/contact): how to reach the lab
