@@ -30,10 +30,10 @@ export type PeopleGroup = {
 
 export const LAB_LEAD: Person = {
     name: 'Jakub Adamczyk',
-    role: 'Lab lead · Researcher, Faculty of Computer Science, AGH',
+    role: 'Principal Investigator (PI), lab leader · Researcher, Faculty of Computer Science, AGH',
     photo: 'img/people/Jakub_Adamczyk.jpg',
     bio:
-        'Leader and founder of MLCIL. ' +
+        'Lab leader and founder of MLCIL. ' +
         'My scientific interests include chemoinformatics, QSAR/QSPR, graph machine learning, ' +
         'and applications of ML in chemoinformatics and other fields. ' +
         'Working as a Senior Chemoinformatician at MatGen.',

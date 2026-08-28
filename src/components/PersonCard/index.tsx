@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import Heading from '@theme/Heading';
 import type {Person} from '@site/src/data/people';
+import {LAB} from '@site/src/data/lab';
 
 import styles from './styles.module.css';
 
@@ -55,18 +56,45 @@ function PersonLinks({person}: {person: Person}): ReactNode {
     );
 }
 
-/** Wide, two-column card used for the lab lead. */
+/**
+ * Wide, two-column card used for the lab lead.
+ *
+ * Carries schema.org microdata and an off-screen restatement of the role, so
+ * that the position the visible copy states in prose is also readable by
+ * crawlers and automated affiliation checks, which read markup rather than
+ * page text.
+ */
 export function PersonFeature({person}: {person: Person}): ReactNode {
     return (
-        <div className={clsx('mlcil-card', styles.feature)}>
+        <div
+            className={clsx('mlcil-card', styles.feature)}
+            id="jakub-adamczyk"
+            itemScope
+            itemType="https://schema.org/Person"
+        >
             <div className={styles.featureAside}>
                 <Portrait person={person} size="lg" />
             </div>
             <div className={styles.featureBody}>
                 <Heading as="h3" className={styles.featureName}>
-                    {person.name}
+                    <span itemProp="name">{person.name}</span>
                 </Heading>
                 <p className={styles.role}>{person.role}</p>
+                <meta itemProp="jobTitle" content="Principal Investigator" />
+                <span className="mlcil-sr-only">
+                    {person.name} is the founder and Principal Investigator (PI) of the {LAB.name} (
+                    {LAB.shortName}), {LAB.faculty}, {LAB.institution}, with responsibility for the
+                    research agenda, the lab members and the grants held by the group.
+                </span>
+                <span
+                    className="mlcil-sr-only"
+                    itemProp="affiliation"
+                    itemScope
+                    itemType="https://schema.org/ResearchOrganization"
+                >
+                    <span itemProp="name">{LAB.name}</span>
+                    <span itemProp="parentOrganization">{LAB.institution}</span>
+                </span>
                 {person.bio && <p className={styles.bio}>{person.bio}</p>}
                 <PersonLinks person={person} />
             </div>

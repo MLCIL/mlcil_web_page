@@ -346,6 +346,17 @@ a.mlcil-card:hover,
     align-items: center;
 }
 
+/* Infima gives navbar links only horizontal padding, so the two icon links end
+   up with adjacent hit areas. Space them out and widen the targets. */
+.navbar__items--right {
+    gap: 0.35rem;
+}
+
+.navbar-agh-link,
+.navbar-github-link {
+    padding: 0 0.6rem;
+}
+
 .navbar-github-link::before {
     content: '';
     width: 22px;
@@ -353,6 +364,30 @@ a.mlcil-card:hover,
     background: currentColor;
     -webkit-mask: var(--mlcil-github-mask) center / contain no-repeat;
     mask: var(--mlcil-github-mask) center / contain no-repeat;
+}
+
+/* The AGH crest is a multi-colour mark, so it goes in as an image rather than a
+   currentColor mask like the GitHub glyph. Both files are transparent and much
+   taller than they are wide, hence the narrow boxes; the widths below are the
+   respective artwork aspect ratios at the navbar logo's 44px height
+   (90x142 and 431x836). */
+.navbar-agh-link {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-agh-link::before {
+    content: '';
+    width: 28px;
+    height: 44px;
+    background: url('/img/agh.png') center / contain no-repeat;
+}
+
+/* The colour mark's bars and wordmark are near-black and vanish on the dark
+   navbar, so dark mode uses AGH's own white version of the same mark. */
+[data-theme='dark'] .navbar-agh-link::before {
+    width: 23px;
+    background-image: url('/img/agh-mono.svg');
 }
 
 :root {
@@ -404,4 +439,20 @@ a.mlcil-card:hover,
     .navbar-sidebar__brand [class*='toggleButton_'] {
         display: none;
     }
+}
+
+/* Off-screen text: read by screen readers, crawlers and text extractors, not
+   painted on the page. Used for facts the layout conveys visually (or through
+   context) but that a machine reading the markup would otherwise miss. */
+.mlcil-sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
 }

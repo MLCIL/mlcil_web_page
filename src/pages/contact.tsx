@@ -48,7 +48,10 @@ export default function ContactPage(): ReactNode {
                         <div className={styles.channel}>
                             <dt className={styles.label}>Address</dt>
                             <dd className={styles.value}>
-                                {LAB.faculty}, {LAB.institution}, {LAB.location}
+                                <a href={LAB.facultyUrl} target="_blank" rel="noreferrer">
+                                    {LAB.faculty}
+                                </a>
+                                , {LAB.institution}, {LAB.location}
                             </dd>
                         </div>
                     </dl>

@@ -8,6 +8,8 @@ export const LAB = {
     shortName: 'MLCIL',
     institution: 'AGH University of Krakow',
     faculty: 'Faculty of Computer Science',
+    facultyUrl: 'https://www.informatyka.agh.edu.pl/en/',
+    institutionUrl: 'https://www.agh.edu.pl/en',
     location: 'Krakow, Poland',
     tagline:
         'Research group focused on chemoinformatics, applied artificial intelligence, and open science',

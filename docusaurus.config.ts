@@ -76,7 +76,19 @@ const config: Config = {
             {
                 name: 'keywords',
                 content:
-                    'machine learning, chemoinformatics, molecular fingerprints, graph neural networks, molecular property prediction, benchmarking, applied machine learning, AGH University of Krakow',
+                    'machine learning, chemoinformatics, molecular fingerprints, graph neural networks, molecular property prediction, benchmarking, applied machine learning, AGH University of Krakow, MLCIL, Jakub Adamczyk, principal investigator, research group',
+            },
+            // Group leadership, spelled out for crawlers and automated
+            // affiliation checks that read metadata rather than page prose.
+            {name: 'author', content: 'Jakub Adamczyk'},
+            {
+                name: 'dc.contributor',
+                content: 'Jakub Adamczyk (Principal Investigator, MLCIL)',
+            },
+            {
+                name: 'organization-lead',
+                content:
+                    'Jakub Adamczyk, founder and Principal Investigator (PI) of the Machine Learning and Chemoinformatics Lab (MLCIL), Faculty of Computer Science, AGH University of Krakow',
             },
         ],
         colorMode: {
@@ -114,6 +126,13 @@ const config: Config = {
                 {to: '/grants', label: 'Grants', position: 'left'},
                 {to: '/blog', label: 'Blog', position: 'left'},
                 {to: '/contact', label: 'Contact', position: 'left'},
+                {
+                    href: 'https://www.informatyka.agh.edu.pl/en/',
+                    position: 'right',
+                    className: 'navbar-agh-link',
+                    'aria-label':
+                        'Faculty of Computer Science, AGH University of Krakow, the host institution of MLCIL',
+                },
                 {
                     href: 'https://github.com/MLCIL',
                     position: 'right',
