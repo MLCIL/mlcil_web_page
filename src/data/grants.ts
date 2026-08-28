@@ -33,6 +33,19 @@ export type Grant = {
 
 export const GRANTS: Grant[] = [
     {
+        id: 'anthropic-claude',
+        title: 'Claude Team for scientists',
+        funder: 'Anthropic',
+        funderShort: 'Anthropic',
+        period: '2026-2027',
+        value: '25 Team Claude seats',
+        description:
+            'Claude access for 10000 research groups from leading scientific institutions, to accelerate scientific research. Includes Claude Science tailored for life science research.',
+        logo: 'img/grants/anthropic.svg',
+        logoAlt: 'Anthropic',
+        url: 'https://claude.com/programs/team-plan-for-scientists',
+    },
+    {
         id: 'nvidia-peptides',
         title: 'Generation of chemically modified peptides using peptide folding information',
         funder: 'NVIDIA',
