@@ -178,7 +178,7 @@ export const PEOPLE_GROUPS: PeopleGroup[] = [
                 bio:
                     'Researching molecular representations and non-typical QSAR/QSPR targets ' +
                     'like massively multilabel classification and biologic macromolecules. ' +
-                    'Working as a ML Engineer and Chemoinformatician at MatGen and Institute of Pharmacology of the Polish Academy of Sciences',
+                    'Working as an ML Engineer and Chemoinformatician at MatGen and the Institute of Pharmacology of the Polish Academy of Sciences',
                 links: [
                     {
                         label: 'ORCID',
