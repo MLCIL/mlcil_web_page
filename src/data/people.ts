@@ -197,6 +197,7 @@ export const PEOPLE_GROUPS: PeopleGroup[] = [
             {
                 name: 'Jolanta Śliwa',
                 role: 'PhD student',
+                photo: 'img/people/Jolanta_Sliwa.jpg',
                 bio:
                     'I am researching machine learning applications in tabletop pen & paper RPG ' +
                     'game design, particularly predictive models for ordinal regression. ' +
