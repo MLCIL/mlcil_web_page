@@ -34,9 +34,9 @@ export const PUBLICATIONS: Publication[] = [
     {
         title: 'Scikit-fingerprints: Python library for scikit-learn compatible molecular fingerprints and chemoinformatics',
         authors: ['J. Adamczyk', 'A. Staniszewski'],
-        venue: 'arXiv preprint',
+        venue: 'Journal of Chemical Information and Modeling',
         year: 2026,
-        type: 'preprint',
+        type: 'journal',
         topics: ['Open-source software', 'Chemoinformatics'],
         links: [
             {
