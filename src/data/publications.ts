@@ -41,8 +41,8 @@ export const PUBLICATIONS: Publication[] = [
         links: [
             {
                 label: 'Paper',
-                href: 'https://pubs.acs.org/jcisd8/article/doi/10.1021/acs.jcim.6c02602/5451451/scikit-fingerprints-A-Python-Library-for-Scikit'
-            }
+                href: 'https://pubs.acs.org/jcisd8/article/doi/10.1021/acs.jcim.6c02602/5451451/scikit-fingerprints-A-Python-Library-for-Scikit',
+            },
             {label: 'arXiv', href: 'https://arxiv.org/abs/2608.02027'},
             {label: 'Code', href: 'https://github.com/MLCIL/scikit-fingerprints'},
         ],
